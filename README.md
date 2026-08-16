@@ -297,6 +297,16 @@ All in `yob15662/sxm-player` at `470b35b`:
 The 500s from SiriusXM's own gateway are transient — the same call succeeded on
 retry. Expected weather, not a broken build.
 
+## License
+
+Apache-2.0, the same as [yob15662/sxm-player](https://github.com/yob15662/sxm-player),
+which this builds on. See [LICENSE](LICENSE), and [NOTICE](NOTICE) for the
+statement of changes that Apache-2.0 §4(b) asks for.
+
+Upstream is not vendored here — it is cloned at build time and the checkout is
+gitignored. What this repo carries is a patch against commit `470b35b` plus new
+files compiled alongside it.
+
 ## Caveats
 
 - Reverse-engineered against SiriusXM's private API. It breaks when they change

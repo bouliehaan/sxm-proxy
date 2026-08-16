@@ -1,0 +1,43 @@
+sxm-proxy
+Copyright 2026 sxm-proxy contributors
+
+This product includes software developed as part of sxm-player
+(https://github.com/yob15662/sxm-player), Copyright the sxm-player authors,
+licensed under the Apache License, Version 2.0.
+
+------------------------------------------------------------------------------
+Statement of changes (Apache License 2.0, section 4(b))
+------------------------------------------------------------------------------
+
+sxm-player is NOT redistributed in this repository. It is cloned at build time
+and the checkout is gitignored, so the upstream source is not vendored here.
+
+What this repository does carry is a patch that modifies upstream source at
+image build time, plus new files compiled alongside it. The patch is
+`extras/patches/samo-stability.patch` and it is applied against upstream commit
+`470b35b`. Modified upstream files:
+
+  SXMPlayer.Client/SiriusXMPlayer.cs
+  SXMPlayer.Client/Services/IcecastStreamer.cs
+  SXMPlayer.Client/Services/Icecast/HlsSegmentProducer.cs
+  SXMPlayer.Client/Services/Icecast/SegmentFanoutHub.cs
+  SXMPlayer.Client/Services/Icecast/IcyStreamWriter.cs
+
+The changes give listeners per-connection identity rather than per-IP, keep the
+shared HLS producer alive briefly after its last subscriber leaves, rate-limit
+channel changes, start playback further back in the playlist window, replay a
+short backlog to newly connected clients, and pace response output to real time.
+`extras/patches/README.md` explains each in full.
+
+New files added by this repository, not derived from upstream:
+
+  extras/SamoExtras.cs          — /channels and /ui routes
+  extras/DecorationsGenre.cs    — extends a generated partial record
+  extras/StreamPacer.cs         — real-time output pacing
+  extras/SamoStabilityTests.cs  — tests for the above
+
+------------------------------------------------------------------------------
+
+This software is not affiliated with, endorsed by, or connected to SiriusXM.
+It talks to a private API and requires your own active subscription. Using it
+violates SiriusXM's terms of service. See the README before running it.
