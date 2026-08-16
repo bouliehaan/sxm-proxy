@@ -1,0 +1,757 @@
+diff --git a/SXMPlayer.Client/Services/Icecast/HlsSegmentProducer.cs b/SXMPlayer.Client/Services/Icecast/HlsSegmentProducer.cs
+index a7f7cda..630e78e 100644
+--- a/SXMPlayer.Client/Services/Icecast/HlsSegmentProducer.cs
++++ b/SXMPlayer.Client/Services/Icecast/HlsSegmentProducer.cs
+@@ -23,8 +23,143 @@ public class HlsSegmentProducer
+     private readonly SegmentFanoutHub _fanout;
+     private CancellationTokenSource? _producerStopCts;
+     private Task? _producerTask;
++    private CancellationTokenSource? _lingerCts;
++    private bool _shuttingDown;
+     private TaskCompletionSource<bool> _activitySignal = CreateActivitySignal();
+ 
++    /// <summary>
++    /// How long the shared producer keeps running after its last subscriber
++    /// leaves.
++    /// <para>
++    /// A cold restart is expensive in the one currency that matters here: it
++    /// costs a fresh tune plus playlist fetch against SiriusXM with real
++    /// subscriber credentials, and it resyncs to the live edge, which is
++    /// audible as a gap. samo's ffmpeg reconnects within
++    /// <c>-reconnect_delay_max 5</c>, and its probe and loudness passes open
++    /// and close connections around the playout constantly, so without a
++    /// linger the common case — a client that comes right back — pays full
++    /// price every time. Holding the producer briefly makes those reconnects
++    /// free.
++    /// </para>
++    /// <para>
++    /// The cost while lingering is that the producer keeps pulling segments
++    /// nobody is listening to. That is strictly less SiriusXM traffic than the
++    /// re-tune it avoids, and it looks like a listener who paused for a
++    /// moment. Settable so tests need not wait on the real duration.
++    /// </para>
++    /// </summary>
++    public TimeSpan ProducerLinger { get; set; } = TimeSpan.FromSeconds(20);
++
++    /// <summary>
++    /// True while the shared producer is running — including while it is
++    /// lingering with no subscribers. Callers use this to decide whether a
++    /// reconnect can re-attach instead of re-tuning.
++    /// </summary>
++    public bool IsActive
++    {
++        get
++        {
++            lock (_producerLock)
++            {
++                return _producerTask is { IsCompleted: false };
++            }
++        }
++    }
++
++    /// <summary>
++    /// True while a linger teardown is armed and waiting to fire.
++    /// <para>
++    /// Exposed because "the teardown was called off" is otherwise invisible:
++    /// the scheduled callback also re-checks the fanout before stopping
++    /// anything, so a reconnect looks the same from the outside whether the
++    /// pending stop was cancelled or merely declined to act. The distinction
++    /// matters in the race where the timer fires at the same moment a client
++    /// reconnects, and this is what makes it testable.
++    /// </para>
++    /// </summary>
++    public bool IsLingerPending
++    {
++        get
++        {
++            lock (_producerLock)
++            {
++                return _lingerCts is not null;
++            }
++        }
++    }
++
++    /// <summary>
++    /// How many segments back from the live edge a fresh producer starts.
++    /// <para>
++    /// This is the difference between a stream a real-time consumer can play
++    /// and one it cannot. SiriusXM's playlist carries a very deep window —
++    /// Elvis Radio returns 1845 segments, about five hours — and the original
++    /// calculation started on the FINAL one. The client then received exactly
++    /// one ~10s segment every ~10s, in lockstep with its own playback, with no
++    /// cushion whatsoever: measured on the wire as a 356KB burst every 11.3s
++    /// and dead air between. A browser survives that because its audio element
++    /// buffers tens of seconds ahead. ffmpeg playing out in real time starves
++    /// the first time a fetch runs even slightly late, which is heard as the
++    /// stream cutting in and out.
++    /// </para>
++    /// <para>
++    /// Starting further back hands the client that cushion up front; steady
++    /// state is unchanged at one segment per segment duration. This costs no
++    /// extra SiriusXM traffic beyond the few segments fetched once at startup,
++    /// and those segments are already listed in the playlist SiriusXM served.
++    /// Apple's own guidance is to begin at least three target durations from
++    /// the end of a live playlist, so this is also the more ordinary-looking
++    /// client behaviour, not the less.
++    /// </para>
++    /// </summary>
++    public int PrebufferSegments
++    {
++        get => _prebufferSegments;
++        set
++        {
++            _prebufferSegments = value;
++            // The cold-start position and the burst-on-connect backlog are two
++            // halves of the same cushion — the first fills the pipe, the second
++            // hands the same head start to everyone who attaches later. They
++            // must not drift apart.
++            _fanout.BacklogSegments = value;
++        }
++    }
++
++    private int _prebufferSegments = 4;
++
++    /// <summary>
++    /// Burst-on-connect depth currently configured on the fanout. Always equal
++    /// to <see cref="PrebufferSegments"/>; exposed so that coupling is testable.
++    /// </summary>
++    public int BacklogSegments => _fanout.BacklogSegments;
++
++    /// <summary>
++    /// Picks the "last already-sent" sequence number for a fresh producer, such
++    /// that the next poll emits the final <paramref name="prebufferSegments"/>
++    /// segments of the playlist rather than only the newest one.
++    /// </summary>
++    /// <param name="firstSequence">Value of #EXT-X-MEDIA-SEQUENCE.</param>
++    /// <param name="segmentCount">Number of segment lines in the playlist.</param>
++    /// <param name="prebufferSegments">How many to hand over immediately.</param>
++    public static long ComputeStartSequence(long firstSequence, int segmentCount, int prebufferSegments)
++    {
++        if (segmentCount <= 0)
++        {
++            return -1;
++        }
++
++        // Segments run firstSequence .. firstSequence + segmentCount - 1, and
++        // the producer emits everything strictly greater than the value
++        // returned here.
++        var lastSequence = firstSequence + segmentCount - 1;
++        var wanted = Math.Max(1, prebufferSegments);
++
++        // Never rewind past the start of the window we were actually given.
++        var earliest = firstSequence - 1;
++        return Math.Max(earliest, lastSequence - wanted);
++    }
++
+     private static TaskCompletionSource<bool> CreateActivitySignal()
+         => new(TaskCreationOptions.RunContinuationsAsynchronously);
+ 
+@@ -44,7 +179,7 @@ public class HlsSegmentProducer
+     {
+         _player = player ?? throw new ArgumentNullException(nameof(player));
+         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+-        _fanout = new SegmentFanoutHub(StopProducerIfIdle);
++        _fanout = new SegmentFanoutHub(StopProducerIfIdle) { BacklogSegments = _prebufferSegments };
+     }
+ 
+     /// <summary>
+@@ -61,6 +196,11 @@ public class HlsSegmentProducer
+     {
+         lock (_producerLock)
+         {
++            // A subscriber arrived — call off any pending linger teardown so
++            // this registration re-attaches to the running producer rather than
++            // racing its shutdown.
++            CancelLinger();
++
+             var wasAlreadyActive = _producerTask is { IsCompleted: false };
+ 
+             _fanout.Register(listener, writer, clientDisconnectToken);
+@@ -148,9 +288,12 @@ public class HlsSegmentProducer
+                         }
+                     }
+ 
+-                    if (lastMediaSequence == -1 && currentMediaSequence > 0)
++                    if (lastMediaSequence == -1)
+                     {
+-                        lastMediaSequence = currentMediaSequence + lines.Count(s => s.Trim().EndsWith(".aac")) - 2;
++                        lastMediaSequence = ComputeStartSequence(
++                            currentMediaSequence,
++                            lines.Count(s => s.Trim().EndsWith(".aac")),
++                            PrebufferSegments);
+                     }
+ 
+                     long segmentSequence = currentMediaSequence;
+@@ -220,6 +363,16 @@ public class HlsSegmentProducer
+         }
+         finally
+         {
++            // CompleteAll empties the fanout, which fires _onEmpty. Without
++            // this flag that would schedule a fresh linger for the very
++            // producer now shutting down — harmless, but it would log a
++            // "holding the producer" line that is the opposite of the truth.
++            lock (_producerLock)
++            {
++                _shuttingDown = true;
++                CancelLinger();
++            }
++
+             _fanout.CompleteAll(completionError);
+ 
+             lock (_producerLock)
+@@ -227,6 +380,7 @@ public class HlsSegmentProducer
+                 _producerStopCts?.Dispose();
+                 _producerStopCts = null;
+                 _producerTask = null;
++                _shuttingDown = false;
+             }
+ 
+             _logger.LogInformation("Shared HLS segment producer has stopped.");
+@@ -244,10 +398,56 @@ public class HlsSegmentProducer
+                 return;
+             }
+ 
+-            _producerStopCts?.Cancel();
++            if (_shuttingDown || _producerTask is not { IsCompleted: false })
++            {
++                return;
++            }
++
++            // Don't tear down on the spot — see ProducerLinger. Schedule the
++            // stop instead, and let a returning subscriber cancel it.
++            CancelLinger();
++            _lingerCts = new CancellationTokenSource();
++            var lingerToken = _lingerCts.Token;
++
++            _logger.LogInformation(
++                "Last subscriber left; holding the HLS producer for {LingerSeconds:F0}s in case a client reconnects.",
++                ProducerLinger.TotalSeconds);
++
++            _ = Task.Delay(ProducerLinger, lingerToken).ContinueWith(
++                _ =>
++                {
++                    lock (_producerLock)
++                    {
++                        if (lingerToken.IsCancellationRequested || _fanout.HasSubscribers)
++                        {
++                            return;
++                        }
++
++                        _logger.LogInformation("Linger elapsed with no subscribers; stopping the HLS segment producer.");
++                        _producerStopCts?.Cancel();
++                    }
++                },
++                CancellationToken.None,
++                TaskContinuationOptions.ExecuteSynchronously,
++                TaskScheduler.Default);
+         }
+     }
+ 
++    /// <summary>
++    /// Cancels a pending linger teardown. Must be called under _producerLock.
++    /// </summary>
++    private void CancelLinger()
++    {
++        if (_lingerCts is null)
++        {
++            return;
++        }
++
++        _lingerCts.Cancel();
++        _lingerCts.Dispose();
++        _lingerCts = null;
++    }
++
+     private async Task<byte[]?> FetchAndDecryptSegment(
+         string channelId,
+         Func<Task<ChannelItemData>> channelProvider,
+diff --git a/SXMPlayer.Client/Services/Icecast/IcyStreamWriter.cs b/SXMPlayer.Client/Services/Icecast/IcyStreamWriter.cs
+index 9d5c709..b905de1 100644
+--- a/SXMPlayer.Client/Services/Icecast/IcyStreamWriter.cs
++++ b/SXMPlayer.Client/Services/Icecast/IcyStreamWriter.cs
+@@ -51,15 +51,42 @@ public class IcyStreamWriter
+         bool injectMetadata,
+         int metadataInterval,
+         int bytesUntilNextMetadata,
+-        CancellationToken cancellationToken)
++        CancellationToken cancellationToken,
++        StreamPacer? pacer = null)
+     {
+         if (!injectMetadata)
+         {
+-            return await WriteWithoutMetadataAsync(audioData, context, cancellationToken);
++            return await WriteWithoutMetadataAsync(audioData, context, cancellationToken, pacer);
+         }
+ 
+         return await WriteWithFrameAwareMetadataAsync(
+-            audioData, context, metadataInterval, bytesUntilNextMetadata, cancellationToken);
++            audioData, context, metadataInterval, bytesUntilNextMetadata, cancellationToken, pacer);
++    }
++
++    /// <summary>
++    /// Hands one chunk to the socket and, when pacing, flushes it and waits for
++    /// real time to catch up.
++    /// <para>
++    /// The flush is the point: without it the chunks pile up in Kestrel's
++    /// output pipe and leave as one burst anyway, which is exactly the
++    /// behaviour the pacer exists to prevent.
++    /// </para>
++    /// </summary>
++    private async Task WritePacedChunkAsync(
++        HttpContext context,
++        ReadOnlyMemory<byte> chunk,
++        StreamPacer? pacer,
++        CancellationToken cancellationToken)
++    {
++        await WriteToResponseWithRetryAsync(context, chunk, cancellationToken);
++
++        if (pacer is null)
++        {
++            return;
++        }
++
++        await FlushResponseWithDisconnectHandlingAsync(context, cancellationToken);
++        await pacer.PaceAsync(chunk.Length, cancellationToken);
+     }
+ 
+     /// <summary>
+@@ -68,7 +95,8 @@ public class IcyStreamWriter
+     private async Task<int> WriteWithoutMetadataAsync(
+         ReadOnlyMemory<byte> audioData,
+         HttpContext context,
+-        CancellationToken cancellationToken)
++        CancellationToken cancellationToken,
++        StreamPacer? pacer = null)
+     {
+         int offset = 0;
+         int remaining = audioData.Length;
+@@ -76,7 +104,7 @@ public class IcyStreamWriter
+         while (remaining > 0)
+         {
+             int chunk = Math.Min(remaining, OutputChunkSize);
+-            await WriteToResponseWithRetryAsync(context, audioData.Slice(offset, chunk), cancellationToken);
++            await WritePacedChunkAsync(context, audioData.Slice(offset, chunk), pacer, cancellationToken);
+             offset += chunk;
+             remaining -= chunk;
+         }
+@@ -95,7 +123,8 @@ public class IcyStreamWriter
+         HttpContext context,
+         int metadataInterval,
+         int bytesUntilNextMetadata,
+-        CancellationToken cancellationToken)
++        CancellationToken cancellationToken,
++        StreamPacer? pacer = null)
+     {
+         if (metadataInterval <= 0)
+         {
+@@ -138,7 +167,7 @@ public class IcyStreamWriter
+             }
+ 
+             int chunk = Math.Min(audioRemaining, Math.Min(bytesUntilNextMetadata, OutputChunkSize));
+-            await WriteToResponseWithRetryAsync(context, audioData.Slice(audioOffset, chunk), cancellationToken);
++            await WritePacedChunkAsync(context, audioData.Slice(audioOffset, chunk), pacer, cancellationToken);
+ 
+             audioOffset += chunk;
+             audioRemaining -= chunk;
+diff --git a/SXMPlayer.Client/Services/Icecast/SegmentFanoutHub.cs b/SXMPlayer.Client/Services/Icecast/SegmentFanoutHub.cs
+index 1664503..f88705b 100644
+--- a/SXMPlayer.Client/Services/Icecast/SegmentFanoutHub.cs
++++ b/SXMPlayer.Client/Services/Icecast/SegmentFanoutHub.cs
+@@ -15,11 +15,55 @@ public sealed class SegmentFanoutHub
+     private readonly ConcurrentDictionary<Guid, (SXMListener Listener, SubscriberRegistration Registration)> _subscribers = new();
+     private readonly Action _onEmpty;
+ 
++    // Guards backlog and subscriber-set together so a segment can never slip
++    // between "replay the backlog" and "join the live fanout" — a newcomer
++    // would otherwise be missing exactly one segment in the middle of its
++    // stream, which is an audible discontinuity rather than a slow start.
++    private readonly object _gate = new();
++    private readonly Queue<SegmentWorkItem> _backlog = new();
++
++    /// <summary>
++    /// How many recently broadcast segments are replayed into a new
++    /// subscriber's queue the moment it connects — Icecast's burst-on-connect,
++    /// for the same reason Icecast does it.
++    /// <para>
++    /// Starting a fresh producer further back in the playlist only helps the
++    /// FIRST client; the producer is shared and long-lived, so everyone who
++    /// attaches to a running one joins mid-flight with an empty queue and
++    /// receives its first audio whenever the next segment happens to land — up
++    /// to a full segment duration of silence, then real-time delivery with no
++    /// cushion. That is the state samo was in on nearly every connection.
++    /// Replaying the backlog gives every client the same head start regardless
++    /// of what the producer was doing when it arrived.
++    /// </para>
++    /// <para>
++    /// Costs nothing against SiriusXM: these segments were already fetched for
++    /// the clients that came before. Memory is bounded at roughly
++    /// <c>BacklogSegments × segment size</c> (about 1.4MB at the default), and
++    /// items are shared by reference rather than copied per subscriber.
++    /// </para>
++    /// </summary>
++    public int BacklogSegments { get; set; } = 4;
++
+     public SegmentFanoutHub(Action onEmpty)
+     {
+         _onEmpty = onEmpty ?? throw new ArgumentNullException(nameof(onEmpty));
+     }
+ 
++    /// <summary>
++    /// Number of segments currently held for burst-on-connect.
++    /// </summary>
++    public int BufferedSegmentCount
++    {
++        get
++        {
++            lock (_gate)
++            {
++                return _backlog.Count;
++            }
++        }
++    }
++
+     public bool HasSubscribers => !_subscribers.IsEmpty;
+ 
+     public int SubscriberCount => _subscribers.Values.Select(v => v.Listener).Distinct().Count();
+@@ -43,24 +87,62 @@ public sealed class SegmentFanoutHub
+         }
+ 
+         var subscriptionId = Guid.NewGuid();
+-        var subscriber = new SubscriberRegistration(writer, disconnectToken.Register(() => Unregister(subscriptionId)));
++        var subscriber = new SubscriberRegistration(writer);
++
++        lock (_gate)
++        {
++            // Hand over the cushion BEFORE joining the live fanout, so the
++            // backlog and everything broadcast afterwards arrive in order.
++            foreach (var buffered in _backlog)
++            {
++                if (!writer.TryWrite(buffered))
++                {
++                    break;
++                }
++            }
++
++            _subscribers[subscriptionId] = (listener, subscriber);
++        }
+ 
+-        _subscribers[subscriptionId] = (listener, subscriber);
++        // Registered after the subscription is visible: if the client has
++        // already gone away, the callback fires now and finds an entry to
++        // remove rather than leaking one.
++        subscriber.AttachDisconnect(disconnectToken.Register(() => Unregister(subscriptionId)));
+     }
+ 
+-    public async ValueTask BroadcastAsync(SegmentWorkItem item, CancellationToken cancellationToken)
++    public ValueTask BroadcastAsync(SegmentWorkItem item, CancellationToken cancellationToken)
+     {
+-        foreach (var (subscriptionId, (listener, subscriber)) in _subscribers.ToArray())
++        List<Guid>? closed = null;
++
++        lock (_gate)
+         {
+-            try
++            _backlog.Enqueue(item);
++            while (_backlog.Count > Math.Max(0, BacklogSegments))
++            {
++                _backlog.Dequeue();
++            }
++
++            // TryWrite rather than WriteAsync: subscriber queues are unbounded,
++            // so this never blocks and the whole fan-out stays inside the lock
++            // that keeps ordering consistent with Register.
++            foreach (var (subscriptionId, (_, subscriber)) in _subscribers.ToArray())
+             {
+-                await subscriber.Writer.WriteAsync(item, cancellationToken);
++                if (!subscriber.Writer.TryWrite(item))
++                {
++                    (closed ??= new List<Guid>()).Add(subscriptionId);
++                }
+             }
+-            catch (ChannelClosedException)
++        }
++
++        if (closed is not null)
++        {
++            foreach (var subscriptionId in closed)
+             {
+                 Unregister(subscriptionId);
+             }
+         }
++
++        return ValueTask.CompletedTask;
+     }
+ 
+     public void Unregister(SXMListener listener, Exception? error = null)
+@@ -98,15 +180,19 @@ public sealed class SegmentFanoutHub
+ 
+     private sealed class SubscriberRegistration
+     {
+-        public SubscriberRegistration(ChannelWriter<SegmentWorkItem> writer, CancellationTokenRegistration registration)
++        public SubscriberRegistration(ChannelWriter<SegmentWorkItem> writer)
+         {
+             Writer = writer;
+-            Registration = registration;
+         }
+ 
+         public ChannelWriter<SegmentWorkItem> Writer { get; }
+ 
+-        private CancellationTokenRegistration Registration { get; }
++        private CancellationTokenRegistration Registration { get; set; }
++
++        public void AttachDisconnect(CancellationTokenRegistration registration)
++        {
++            Registration = registration;
++        }
+ 
+         public void Complete(Exception? error = null)
+         {
+diff --git a/SXMPlayer.Client/Services/IcecastStreamer.cs b/SXMPlayer.Client/Services/IcecastStreamer.cs
+index 5ce05bc..df5e379 100644
+--- a/SXMPlayer.Client/Services/IcecastStreamer.cs
++++ b/SXMPlayer.Client/Services/IcecastStreamer.cs
+@@ -38,6 +38,32 @@ public class IcecastStreamer
+         set => _streamWriter.OutputChunkSize = value;
+     }
+ 
++    /// <summary>
++    /// True while the shared HLS producer is running, including its linger
++    /// window. A caller seeing true can re-attach a reconnecting client without
++    /// re-tuning against SiriusXM.
++    /// </summary>
++    public bool IsProducerActive => _segmentProducer.IsActive;
++
++    /// <summary>
++    /// How long the shared producer survives its last subscriber leaving.
++    /// </summary>
++    public TimeSpan ProducerLinger
++    {
++        get => _segmentProducer.ProducerLinger;
++        set => _segmentProducer.ProducerLinger = value;
++    }
++
++    /// <summary>
++    /// How many segments of cushion a fresh producer hands a new client before
++    /// settling into real-time delivery.
++    /// </summary>
++    public int PrebufferSegments
++    {
++        get => _segmentProducer.PrebufferSegments;
++        set => _segmentProducer.PrebufferSegments = value;
++    }
++
+     public IcecastStreamer(ILogger<SiriusXMPlayer> logger, MetadataService metadataService, SiriusXMPlayer player)
+     {
+         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+@@ -75,9 +101,10 @@ public class IcecastStreamer
+         bool injectMeta,
+         int metaInt,
+         int bytesUntilMeta,
+-        CancellationToken ct)
++        CancellationToken ct,
++        StreamPacer? pacer = null)
+     {
+-        return await _streamWriter.WriteAsync(data, ctx, injectMeta, metaInt, bytesUntilMeta, ct);
++        return await _streamWriter.WriteAsync(data, ctx, injectMeta, metaInt, bytesUntilMeta, ct, pacer);
+     }
+ 
+     /// <summary>
+diff --git a/SXMPlayer.Client/SiriusXMPlayer.cs b/SXMPlayer.Client/SiriusXMPlayer.cs
+index 5a1efdf..87f9cae 100644
+--- a/SXMPlayer.Client/SiriusXMPlayer.cs
++++ b/SXMPlayer.Client/SiriusXMPlayer.cs
+@@ -13,7 +13,19 @@ using System.Diagnostics;
+ 
+ namespace SXMPlayer;
+ 
+-public record SXMListener(IPAddress IPAddress)
++// Identity is per-CONNECTION, not per-IP.
++//
++// Everything samo runs — the ffmpeg playout, the ICY metadata probe, the
++// loudness measurement pass — reaches this proxy from one address: the docker
++// bridge gateway. An IP-keyed listener collapsed all of them into a single
++// record, and SegmentFanoutHub.Unregister(listener) matches on record
++// equality, so retiring any one of them tore the live playout off the air as
++// collateral. ConnectionId is Kestrel's per-connection id, which makes
++// siblings distinct and stops them evicting each other.
++//
++// The default keeps the older IP-only call sites (/playlists, /stream) compiling
++// unchanged; they are MPD-oriented routes samo never touches.
++public record SXMListener(IPAddress IPAddress, string ConnectionId = "")
+ {
+     public DateTimeOffset LastActivity { get; set; }
+     public DateTimeOffset? LastPlaylistRequest { get; set; }
+@@ -74,6 +86,26 @@ public class SiriusXMPlayer : IDisposable
+     // Metadata fields removed - now in MetadataService
+     private ILogger<SiriusXMPlayer> logger;
+     private List<SXMListener> clients = new List<SXMListener>();
++
++    // How long a closed connection's record lingers before the reaper drops it.
++    // Connection ids are not reused, so anything this stale is unreachable.
++    private static readonly TimeSpan CLIENT_RECORD_RETENTION = TimeSpan.FromMinutes(10);
++
++    // Minimum time the proxy stays on a channel before honouring a request for
++    // a different one.
++    //
++    // This is an ACCOUNT-SAFETY control, not a performance one. Every channel
++    // change is a fresh tune plus playlist fetch against SiriusXM using real
++    // subscriber credentials, and something that flips channels every few
++    // seconds looks nothing like a person listening to the radio. A
++    // misconfigured samo schedule — two stations pointed at two GUIDs,
++    // alternating — could otherwise drive re-tunes indefinitely. Requests
++    // arriving inside the window are refused locally and cost SiriusXM nothing.
++    //
++    // 30s sits far below any legitimate schedule change and far above the churn
++    // this was written to stop.
++    private static readonly TimeSpan MIN_CHANNEL_DWELL = TimeSpan.FromSeconds(30);
++    private DateTimeOffset lastChannelChangeAt = DateTimeOffset.MinValue;
+     // Metadata fields removed - now in MetadataService
+ 
+     private CancellationTokenSource tokenSource = new CancellationTokenSource();
+@@ -269,6 +301,7 @@ public class SiriusXMPlayer : IDisposable
+         if (hasChanged)
+         {
+             logger.LogInformation($"Setting current channel to {channelId}");
++            lastChannelChangeAt = DateTimeOffset.Now;
+             progressTimerManager.MarkChannelChanged();
+             channelChangedSource.Cancel();
+             channelChangedSource = new CancellationTokenSource();
+@@ -498,14 +531,16 @@ public class SiriusXMPlayer : IDisposable
+         return channels.First(c => c.Entity.Filename == fileName).Entity;
+     }
+ 
+-    public SXMListener TrackListenerIP(IPAddress ipAddress)
++    public SXMListener TrackListenerIP(IPAddress ipAddress) => TrackListener(ipAddress, string.Empty);
++
++    public SXMListener TrackListener(IPAddress ipAddress, string connectionId)
+     {
+         UpdateClientActivity();
+         //if (ipAddress is null)
+         //    return null;
+         lock (clients)
+         {
+-            var client = clients.FirstOrDefault(c => c.IPAddress.Equals(ipAddress));
++            var client = clients.FirstOrDefault(c => c.IPAddress.Equals(ipAddress) && c.ConnectionId == connectionId);
+             var hasPrimary = clients.Any(c => c.IsPrimary);
+             if (client != null)
+             {
+@@ -515,8 +550,8 @@ public class SiriusXMPlayer : IDisposable
+             }
+             else
+             {
+-                var newClient = new SXMListener(ipAddress) { LastActivity = DateTimeOffset.Now, IsPrimary = !hasPrimary, IsActive = true };
+-                logger.LogInformation($"Adding new client {newClient.IPAddress} - Primary: {newClient.IsPrimary}");
++                var newClient = new SXMListener(ipAddress, connectionId) { LastActivity = DateTimeOffset.Now, IsPrimary = !hasPrimary, IsActive = true };
++                logger.LogInformation($"Adding new client {newClient.IPAddress}#{newClient.ConnectionId} - Primary: {newClient.IsPrimary}");
+                 clients.Add(newClient);
+                 return newClient;
+             }
+@@ -553,14 +588,25 @@ public class SiriusXMPlayer : IDisposable
+             var activeClientCount = clients.Count(c => c.IsActive);
+             foreach (var c in toDeactivate)
+             {
+-                logger.LogInformation($"Deactivating inactive client {c.IPAddress} - {activeClientCount} active clients");
++                logger.LogInformation($"Deactivating inactive client {c.IPAddress}#{c.ConnectionId} - {activeClientCount} active clients");
++            }
++
++            // Client records are per-connection now, so without a reaper this
++            // list would grow by one entry per reconnect and never shrink.
++            // Anything long deactivated is a closed socket that will never be
++            // looked up again — its connection id is not reused.
++            var pruned = clients.RemoveAll(c =>
++                !c.IsActive && DateTimeOffset.Now - c.LastActivity > CLIENT_RECORD_RETENTION);
++            if (pruned > 0)
++            {
++                logger.LogDebug($"Pruned {pruned} closed client record(s); {clients.Count} retained");
+             }
+ 
+             if (clients.Any(c => c.IsActive) && !clients.Any(c => c.IsPrimary && c.IsActive))
+             {
+                 var newPrimary = clients.First(c => c.IsActive);
+                 newPrimary.IsPrimary = true;
+-                logger.LogInformation($"Setting primary client to {newPrimary.IPAddress}");
++                logger.LogInformation($"Setting primary client to {newPrimary.IPAddress}#{newPrimary.ConnectionId}");
+             }
+         }
+ 
+@@ -594,9 +640,50 @@ public class SiriusXMPlayer : IDisposable
+     /// </summary>
+     public async Task StreamIcecastAsync(string channelId, HttpContext ctx, CancellationToken ct)
+     {
+-        var listener = TrackListenerIP(ctx.Connection.RemoteIpAddress!);
+-        _ = await GetStreamPlaylist(channelId, listener, alias: CURRENT_ID, useCache: false);
++        var listener = TrackListener(ctx.Connection.RemoteIpAddress!, ctx.Connection.Id);
++
++        // Both decisions below are made from purely local state before any
++        // SiriusXM call: GetCurrentChannelAsync reads an in-memory field
++        // (falling back to a local file), so a refused change and a skipped
++        // re-tune each cost SiriusXM nothing.
+         var current = await metadataService.GetCurrentChannelAsync();
++        var isChannelChange = channelId != CURRENT_ID && current?.Entity.Id != channelId;
++
++        if (isChannelChange && DateTimeOffset.Now - lastChannelChangeAt < MIN_CHANNEL_DWELL)
++        {
++            var elapsed = DateTimeOffset.Now - lastChannelChangeAt;
++            var wait = MIN_CHANNEL_DWELL - elapsed;
++            logger.LogWarning(
++                "Refusing channel change to {ChannelId} for {ClientIp}: {Elapsed:F1}s since the last change, {Wait:F1}s of dwell left. Rapid re-tuning is what gets a SiriusXM account flagged.",
++                channelId,
++                ctx.Connection.RemoteIpAddress,
++                elapsed.TotalSeconds,
++                wait.TotalSeconds);
++
++            ctx.Response.StatusCode = 429;
++            ctx.Response.Headers["Retry-After"] = ((int)Math.Ceiling(wait.TotalSeconds)).ToString();
++            return;
++        }
++
++        // A same-channel reconnect while the producer is still running needs no
++        // SiriusXM traffic at all — the producer is already polling this
++        // channel's playlist on its own loop, so the tuning data is fresh. The
++        // unconditional useCache:false fetch that used to run here cost one
++        // wasted playlist request per ffmpeg reconnect, and reconnects are the
++        // common case, not the exception.
++        if (isChannelChange || !icecastStreamer.IsProducerActive)
++        {
++            _ = await GetStreamPlaylist(channelId, listener, alias: CURRENT_ID, useCache: false);
++            current = await metadataService.GetCurrentChannelAsync();
++        }
++        else
++        {
++            logger.LogInformation(
++                "Re-attaching {ClientIp} to the live producer for {ChannelId}; no re-tune needed.",
++                ctx.Connection.RemoteIpAddress,
++                channelId);
++        }
++
+         if (current == null)
+         {
+             throw new InvalidOperationException("No channel data available");
+@@ -644,6 +731,12 @@ public class SiriusXMPlayer : IDisposable
+ 
+         int bytesUntilMeta = metaInt ?? int.MaxValue;
+ 
++        // One pacer for the whole connection, deliberately outside the loop
++        // below: its virtual clock has to survive a producer restart, or every
++        // restart would hand the client another free burst and put it back
++        // ahead of real time.
++        var pacer = new StreamPacer();
++
+         while (!ct.IsCancellationRequested)
+         {
+             // Force to resend metadata on next segment
+@@ -670,7 +763,13 @@ public class SiriusXMPlayer : IDisposable
+                         // Data is already decrypted by the producer
+                         if (item.AudioData is not null)
+                         {
+-                            bytesUntilMeta = await icecastStreamer.WriteWithIcyAsync(item.AudioData.Value, ctx, injectMeta, metaInt ?? int.MaxValue, bytesUntilMeta, ct);
++                            // Rate comes from this segment's own bytes and its
++                            // measured playing time, so pacing tracks the real
++                            // encoding rather than a nominal bitrate.
++                            var audio = item.AudioData.Value;
++                            pacer.SetRate(audio.Length, StreamPacer.MeasureDurationSeconds(audio.Span));
++
++                            bytesUntilMeta = await icecastStreamer.WriteWithIcyAsync(audio, ctx, injectMeta, metaInt ?? int.MaxValue, bytesUntilMeta, ct, pacer);
+                             listener.LastActivity = DateTimeOffset.Now;
+                         }
+                         else

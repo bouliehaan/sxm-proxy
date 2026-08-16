@@ -1,0 +1,3474 @@
+[
+ {
+  "id": "194adbca-34d6-cb94-b153-3488ee563308",
+  "num": 2,
+  "name": "SiriusXM Hits 1",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "98672b8b-d1ec-9286-7a7f-b829a617500b",
+  "num": 3,
+  "name": "Unwell Music",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "916d7bd2-33ad-2fac-5787-cc1865a499be",
+  "num": 4,
+  "name": "Life with John Mayer",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "9e8d6f72-0b59-85cf-a222-b18d38acdc0f",
+  "num": 5,
+  "name": "The Pulse",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "44f9129f-579a-3d23-218f-3c3518036fc6",
+  "num": 6,
+  "name": "PopRocks",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "95d4d8ef-55e4-8337-78f1-2fda944991d8",
+  "num": 7,
+  "name": "70s on 7",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "2ea07147-a720-ed0c-d4ce-d7bddd1640d3",
+  "num": 8,
+  "name": "80s on 8",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "c9256031-1123-f35f-4d49-1ba4d5379258",
+  "num": 9,
+  "name": "90s on 9",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "40c3d189-9611-e59f-5808-7847e294642e",
+  "num": 10,
+  "name": "Pop2K",
+  "genre": "Hip-Hop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "038e9a9a-4878-7561-521b-5d432a0798a0",
+  "num": 11,
+  "name": "The 10s Spot",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "dc5d3e2e-4729-7a6b-25f9-fe15dcc352d3",
+  "num": 12,
+  "name": "The Kelly Clarkson Connection",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5d71ae5d-5c6e-0430-6fc5-d9ca0c1c34c0",
+  "num": 13,
+  "name": "Pitbull's Globalization",
+  "genre": "Dance & Electronic",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "1898923d-071d-0abd-1a62-ed0d2702d4f1",
+  "num": 14,
+  "name": "The Bridge",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "9150cc82-af5c-3be3-d170-0e81d87375a8",
+  "num": 15,
+  "name": "Yacht Rock Radio",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "bda81f03-f231-d4db-56ad-40cb132c5663",
+  "num": 16,
+  "name": "The Blend",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "41f8b174-fb06-1707-aaa7-e74e109c2ee9",
+  "num": 17,
+  "name": "The Coffee House",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "20801778-3df2-d607-eab5-e03de0ca7815",
+  "num": 18,
+  "name": "The Beatles Channel",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "881c9b1f-e7fd-4637-b87a-0dd06f1831a5",
+  "num": 19,
+  "name": "Bob Marley's Tuff Gong",
+  "genre": "International",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "727fa612-6e53-458e-720d-b662dc974e5d",
+  "num": 20,
+  "name": "E Street Radio",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "3b83dc80-5987-6898-e98d-a98012f700c1",
+  "num": 21,
+  "name": "Underground Garage",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "cdc9bee8-9317-37fa-ec8e-464096670c60",
+  "num": 22,
+  "name": "Pearl Jam Radio",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "067801cb-bb3f-1707-dd21-d77e06bb27c0",
+  "num": 23,
+  "name": "Grateful Dead",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "c636d008-7cb0-99eb-7fb7-7c489f862a26",
+  "num": 24,
+  "name": "Radio Margaritaville",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "7a642de7-c33f-a628-efb2-3d94a829d17b",
+  "num": 25,
+  "name": "Classic Rewind",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5ad8659a-414a-9e26-b973-f5a229d788dd",
+  "num": 26,
+  "name": "Classic Vinyl",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "59b6ed0e-4c39-ec45-f8be-ce1599661ce3",
+  "num": 27,
+  "name": "Alt2K",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "804a5411-b234-1188-27da-f01197103886",
+  "num": 28,
+  "name": "The Spectrum",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "0b5b5f60-dfcf-eba9-1dc6-ec3c909f4541",
+  "num": 29,
+  "name": "Phish Radio",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "69e5185d-d218-8fbc-082f-6ea5a16ca4db",
+  "num": 30,
+  "name": "Dave Matthews Band Radio",
+  "genre": "Alternative & Indie",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "60b0ea2e-dec7-1d4a-da2a-6de09f273fe7",
+  "num": 31,
+  "name": "Tom Petty Radio",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "a4b7a4f7-af96-3ae6-53df-f78ff9ac9aab",
+  "num": 32,
+  "name": "U2 X-Radio",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "65f04311-3581-256c-97b9-279838d6ff5e",
+  "num": 33,
+  "name": "1st Wave",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "32c4747f-8739-d578-62d8-08a92d518445",
+  "num": 34,
+  "name": "Lithium",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "f49737db-bea3-0c13-9834-b879fb1894c4",
+  "num": 35,
+  "name": "SiriusXMU",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "fd5740ec-7f11-0ecf-f676-46f9dc056d2c",
+  "num": 36,
+  "name": "Alt Nation",
+  "genre": "Alternative & Indie",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "0fed9647-cc82-24d7-526d-98762e8a52cd",
+  "num": 37,
+  "name": "Octane",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "fed8de31-8d51-8949-6c69-2035fb0485b0",
+  "num": 38,
+  "name": "Ozzy's Boneyard",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b8b47809-4e8e-f556-8325-bd45fa3d4dc4",
+  "num": 39,
+  "name": "Hair Nation",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "634ea01e-4ae2-c7e8-7567-138965e8a6fe",
+  "num": 40,
+  "name": "Liquid Metal",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "f936a498-89c7-bc15-f158-19a015db0683",
+  "num": 41,
+  "name": "SiriusXM Turbo",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "35b0a4e3-b63d-b68e-4c34-6462579a8721",
+  "num": 42,
+  "name": "Maximum Metallica",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "988d25d1-db91-ee15-72e1-386c1972b8b0",
+  "num": 43,
+  "name": "Rock The Bells Radio",
+  "genre": "Hip-Hop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "bd54fc02-e063-0e3e-0cbb-4ceafef734e7",
+  "num": 44,
+  "name": "Hip-Hop Nation",
+  "genre": "Hip-Hop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "2022dfab-580f-675f-6aad-00aad9c3be9b",
+  "num": 45,
+  "name": "Shade 45",
+  "genre": "Hip-Hop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "c2a517d4-c02f-06eb-77cf-f81bfa719188",
+  "num": 46,
+  "name": "The Heat",
+  "genre": "Hip-Hop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "25de1705-19ad-6f6e-d45f-3f8775a37800",
+  "num": 47,
+  "name": "Heart & Soul",
+  "genre": "R&B",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "fe951560-f7e7-2ee3-9de9-cfd89fd54ac5",
+  "num": 48,
+  "name": "The Flow",
+  "genre": "Hip-Hop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "847b22e6-1d35-b5b3-92f4-0c5e4e7b9040",
+  "num": 49,
+  "name": "Flex2K",
+  "genre": "Hip-Hop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "05cd3a1a-d292-3b8e-e8c9-1566d0726994",
+  "num": 50,
+  "name": "SiriusXM FLY",
+  "genre": "Hip-Hop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "7b32233d-bf01-9654-d97f-9e261aad3d8f",
+  "num": 51,
+  "name": "The Groove",
+  "genre": "R&B",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "6adef1b5-d812-9c10-7c6c-f05af4e27077",
+  "num": 52,
+  "name": "BPM",
+  "genre": "Dance & Electronic",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "4ebc3011-0ebe-a9ad-c58b-9a306f60fc2b",
+  "num": 53,
+  "name": "Diplo's Revolution",
+  "genre": "Dance & Electronic",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "e3b61a24-206d-4fa1-43ae-14ea190e47a6",
+  "num": 54,
+  "name": "Studio 54 Radio",
+  "genre": "Dance & Electronic",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "834383dd-9a7e-d59e-81a2-dd13e0377af2",
+  "num": 55,
+  "name": "SiriusXM Chill",
+  "genre": "Dance & Electronic",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "ffd94bb6-5368-67ae-91be-5b2bababeca0",
+  "num": 56,
+  "name": "The Highway",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d3253c66-e1e1-331b-02e6-71580c33791b",
+  "num": 57,
+  "name": "Y2Kountry",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "32566352-8e68-80f8-fe11-3f9715b63876",
+  "num": 58,
+  "name": "Prime Country",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "0736f9f8-2b36-d38f-e3a6-d4de7d7877a8",
+  "num": 59,
+  "name": "No Shoes Radio",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "75301b34-2f01-2c17-0b52-028bec0d271c",
+  "num": 60,
+  "name": "Carrie's Country",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "0aee72ed-5dd8-2848-3567-d8809e123cd1",
+  "num": 61,
+  "name": "Willie's Roadhouse",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "176daca5-6810-3a1c-49e9-39b69055e811",
+  "num": 62,
+  "name": "Outlaw Country",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "ad0ab172-202f-c05b-c7b9-597be600541f",
+  "num": 63,
+  "name": "Chris Stapleton Radio",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "1430a1d6-68ba-edb7-acaf-c500b1c00354",
+  "num": 64,
+  "name": "Morgan Wallen Radio",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "9e545d10-7c21-9707-1d34-3d503b7365bc",
+  "num": 65,
+  "name": "Bluegrass Junction",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "c46c9810-6274-a715-a8b9-de9d4ac33873",
+  "num": 66,
+  "name": "Symphony Hall",
+  "genre": "Classical",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "e6333906-2e89-6c07-59d6-36d09248b8dc",
+  "num": 67,
+  "name": "Real Jazz",
+  "genre": "Jazz",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "e4b5402c-c608-db84-ad15-4bc8e2cdccce",
+  "num": 68,
+  "name": "Watercolors",
+  "genre": "Jazz",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "adc27a20-6fc4-7269-5ca6-4a492f7dfa55",
+  "num": 69,
+  "name": "On Broadway",
+  "genre": "Standards",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "38dccb7c-6e3c-1473-d0db-0b3b8b999707",
+  "num": 70,
+  "name": "Siriusly Sinatra",
+  "genre": "Jazz",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b069d7d9-a765-b98e-9c87-3791d459f2ee",
+  "num": 71,
+  "name": "40s Junction",
+  "genre": "Standards",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "a62ffa9f-e016-5693-adcb-c76c328e1bee",
+  "num": 72,
+  "name": "50s Gold",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "6567f2ee-4d7a-cd6d-3402-55ed6089cd0c",
+  "num": 73,
+  "name": "60s Gold",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "aa46ae69-ab44-f416-58ee-9fdf07462c0e",
+  "num": 74,
+  "name": "Smokey's Soul Town",
+  "genre": "R&B",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "c4406844-de06-901b-6b4f-02420e2bd2d6",
+  "num": 75,
+  "name": "BB King's Bluesville",
+  "genre": "Jazz",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "a96c9390-313c-3a51-5dac-953504f4f237",
+  "num": 76,
+  "name": "Elvis Radio",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "e4fe4bca-1af8-bf9e-c20b-813f204aa18e",
+  "num": 77,
+  "name": "Kirk Franklin's Praise",
+  "genre": "Christian",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "c2e3e686-93a6-5d22-c818-6d8ea63bcc7c",
+  "num": 78,
+  "name": "The Message",
+  "genre": "Christian",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "c5647ffa-5f13-5030-88f6-13ed47df40dc",
+  "num": 79,
+  "name": "Message Worship",
+  "genre": "Christian",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "51f88432-8311-37e0-b57d-9b0ab63f5ce9",
+  "num": 80,
+  "name": "ESPN Radio",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "e253bdca-601f-2b68-52fc-3f6a9fa33bb9",
+  "num": 81,
+  "name": "ESPN Xtra",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "23999ddf-2cc2-35e2-7d04-6cc2749043d0",
+  "num": 82,
+  "name": "Mad Dog Sports Radio",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "21b63878-b369-1503-d1c8-6025cc8571de",
+  "num": 83,
+  "name": "FOX Sports on SiriusXM",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d9dcf813-1a1a-2f92-a53f-e372ffc235ea",
+  "num": 84,
+  "name": "College Sports Radio",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b8d08b56-6bca-a461-189e-ea00b223fbf4",
+  "num": 85,
+  "name": "NBC Sports Radio",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "325f06d1-8734-0378-1ae1-66323143c249",
+  "num": 86,
+  "name": "SiriusXM NBA Radio",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "66e0c959-ced8-2958-5d2c-c19ca4f770a4",
+  "num": 87,
+  "name": "Fantasy Sports Radio",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "f3126d70-09ea-bd0c-57cd-af5ab798f313",
+  "num": 88,
+  "name": "SiriusXM NFL Radio",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "8d9c0b16-4734-3bc4-d523-7c942cf888aa",
+  "num": 89,
+  "name": "MLB Network Radio",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "c875a2e9-2768-ed46-5487-4e3e667ae553",
+  "num": 90,
+  "name": "SiriusXM NASCAR Radio",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "884c803d-cbd9-098b-527d-a34979274ded",
+  "num": 91,
+  "name": "NHL Network Radio",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "a44e273d-a7e5-c358-a8ae-39dc91ca9c30",
+  "num": 92,
+  "name": "SiriusXM PGA TOUR Radio",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "96f5d0e4-ebff-564a-6c39-70a4a642e360",
+  "num": 93,
+  "name": "Netflix Is A Joke Radio",
+  "genre": "Comedy",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "0c8ec1e3-f152-0ea1-3b45-35f7ec816990",
+  "num": 94,
+  "name": "Comedy Greats",
+  "genre": "Comedy",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "771bf1f6-3885-aa77-e98a-51f5dcccbeba",
+  "num": 95,
+  "name": "Comedy Central Radio",
+  "genre": "Comedy",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "ab6a16eb-6e7b-6933-1dd1-8b04fbc922ed",
+  "num": 96,
+  "name": "Kevin Hart's LOL Radio",
+  "genre": "Comedy",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "3cebb3a3-6b03-2ad2-e5be-d9f4841249a2",
+  "num": 97,
+  "name": "Comedy Roundup",
+  "genre": "Comedy",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d7151f52-694d-64b7-4e31-9b2f4f534454",
+  "num": 98,
+  "name": "Pure Comedy",
+  "genre": "Comedy",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "8b66f94a-7304-fd83-d442-2153b881c21f",
+  "num": 99,
+  "name": "Sebastian Maniscalco\u2019s Comedy Radio",
+  "genre": "Comedy",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "123f7d39-c99f-2f01-7900-0d4b8b010cb7",
+  "num": 100,
+  "name": "Howard 100",
+  "genre": "",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "72874f52-9f17-2e8f-d4cc-3bfdccb4227c",
+  "num": 101,
+  "name": "Howard 101",
+  "genre": "",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "56605cc5-88b8-557b-fc3c-dae7eb41bf56",
+  "num": 102,
+  "name": "Radio Andy",
+  "genre": "Pop Culture",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "80867fa3-093f-b076-bedc-af8d71cb54ab",
+  "num": 103,
+  "name": "Faction Talk",
+  "genre": "Pop Culture",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "dd21ed4a-49e7-ae02-3a61-cd730602a389",
+  "num": 104,
+  "name": "Conan O'Brien Radio",
+  "genre": "Comedy",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b603ee62-cf5b-bbb5-1abf-e7169adf25aa",
+  "num": 107,
+  "name": "Dateline 24/7",
+  "genre": "True Crime",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "2a74320f-938b-8e80-5e7f-5e8e110e1d42",
+  "num": 108,
+  "name": "TODAY Show Radio",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "813d656c-9af5-7f51-bb48-d724327d9289",
+  "num": 109,
+  "name": "Stars",
+  "genre": "Society & Culture",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "97548371-5133-a4c6-373f-801a18dc3237",
+  "num": 110,
+  "name": "Doctor Radio",
+  "genre": "Health & Wellness",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "fc92713b-2006-4980-ef7c-e70f1da80427",
+  "num": 111,
+  "name": "The Megyn Kelly Channel",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "2b6effb8-eb0e-7421-d7bb-d843a9ff3ce1",
+  "num": 112,
+  "name": "CNBC",
+  "genre": "Business",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "9a32cb1d-e158-5f34-79be-cbeaca00cd11",
+  "num": 113,
+  "name": "FOX Business",
+  "genre": "Business",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5f8894e9-d615-21d0-a114-ecd08e7fa75c",
+  "num": 114,
+  "name": "FOX News Channel",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "f4a5f723-128d-c383-1787-291d52f47020",
+  "num": 115,
+  "name": "FOX News Headlines 24/7",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "3c7b2421-7ce4-0ecb-bc70-7f60f15d3d29",
+  "num": 116,
+  "name": "CNN",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "95bffee3-e903-ca28-6332-1b94f41a8962",
+  "num": 118,
+  "name": "MS NOW",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "6c3df863-db7b-74c4-49c8-c2b202f3ffdf",
+  "num": 119,
+  "name": "PRX Remix",
+  "genre": "Society & Culture",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "93c1c9bd-3403-392c-9ae7-ae292b8bb052",
+  "num": 120,
+  "name": "BBC World Service",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "27adcf33-1681-9f00-2461-2129a2471abf",
+  "num": 121,
+  "name": "Bloomberg Radio",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "22b6d419-0bc3-31f7-c9dd-53ca6c673d8c",
+  "num": 122,
+  "name": "NPR Now",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "bf022b5f-a52e-564e-c35b-4211126df403",
+  "num": 123,
+  "name": "Triumph",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "43993462-1c73-efb8-29e5-0c4652cf8e4f",
+  "num": 124,
+  "name": "POTUS Politics",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "6739babb-7975-e60e-1835-fbacd4bbd855",
+  "num": 125,
+  "name": "SiriusXM Patriot",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "fb5bc33e-a51e-d1dd-d547-3d80e0b8324c",
+  "num": 126,
+  "name": "SiriusXM Urban View",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "fb452ece-ac0c-2236-780a-d85c72fbcc88",
+  "num": 127,
+  "name": "SiriusXM Progress",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "635c7928-8df7-5677-c92a-4492be0d3bd8",
+  "num": 128,
+  "name": "Joel Osteen Radio",
+  "genre": "Lifestyle & Health",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "88c59be1-adab-d9c1-ee63-05fdef54f094",
+  "num": 129,
+  "name": "The Catholic Channel",
+  "genre": "Religion",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "2692983c-1779-bca2-800c-76b8dd988ae8",
+  "num": 130,
+  "name": "EWTN Radio",
+  "genre": "Religion",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "a078936b-043a-868c-3def-233ac0e49853",
+  "num": 131,
+  "name": "Family Talk",
+  "genre": "Religion",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "9737bbee-364f-05f9-fe3f-392bbbf61850",
+  "num": 132,
+  "name": "Business Radio",
+  "genre": "Business",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "95cf8bf1-fc4e-76b9-ac2a-617dca0325e7",
+  "num": 133,
+  "name": "Disney Hits",
+  "genre": "Family & Kids",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5d6347dd-ce61-9b85-c1d9-70a82209b02e",
+  "num": 134,
+  "name": "Kids Place",
+  "genre": "Family & Kids",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d8a071ae-c656-bbdb-a4ec-cbc1d71b2740",
+  "num": 135,
+  "name": "KIDZ BOP Radio",
+  "genre": "Family & Kids",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "3f21599e-f0e6-54f9-dbf2-6122bef705ad",
+  "num": 136,
+  "name": "CoComelon & Friends",
+  "genre": "Family & Kids",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "87dba34f-e68a-f241-bc4d-34647f1a61c9",
+  "num": 140,
+  "name": "Holy Culture Radio",
+  "genre": "",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "15c78a20-48ff-41f2-aa4e-d0da15455c24",
+  "num": 141,
+  "name": "HUR Voices",
+  "genre": "Society & Culture",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "8261e004-8a69-47cd-317a-bcf1fbb05bca",
+  "num": 142,
+  "name": "HBCU",
+  "genre": "Society & Culture",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "ffbdc12f-4ed9-0896-af68-a1353b5f0b7b",
+  "num": 143,
+  "name": "BYUradio",
+  "genre": "Society & Culture",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "bf819115-9d0d-c4fe-3f2b-bec9cb58ee9e",
+  "num": 144,
+  "name": "Korea Today",
+  "genre": "Society & Culture",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "51c76a31-795d-1cac-bc97-bf11b9fb72b4",
+  "num": 145,
+  "name": "SLAM Radio",
+  "genre": "Society & Culture",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "01305215-db22-2cdc-7eaf-ca12c60a2643",
+  "num": 146,
+  "name": "Road Dog Trucking",
+  "genre": "",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "691c32ca-de5c-49c2-fa10-e2c2fc83ed21",
+  "num": 147,
+  "name": "RURAL Radio",
+  "genre": "",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "6ce53b6e-fef9-ab81-e5e3-1e100e8a5e84",
+  "num": 148,
+  "name": "Radio Classics",
+  "genre": "Fiction & Drama",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "ab3ef743-4a2d-f67b-ea13-283843b3cfb5",
+  "num": 149,
+  "name": "Escape",
+  "genre": "Jazz",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "8a38c48f-9f99-17ce-8a62-435eecf51ab0",
+  "num": 150,
+  "name": "Bill Gaither's enLighten",
+  "genre": "Christian",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d17d9b5a-2577-1241-b7f0-efac03348b78",
+  "num": 151,
+  "name": "Hits Uno",
+  "genre": "Latin",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "53b80144-2cb1-e723-07fd-6b164434b186",
+  "num": 152,
+  "name": "Caliente",
+  "genre": "Latin",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "23771c8c-4631-0fa1-2038-b793bc7e404b",
+  "num": 153,
+  "name": "\u00c1guila",
+  "genre": "Latin",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "1a649e3b-6686-77fc-6ccb-7184feb7bd85",
+  "num": 154,
+  "name": "En Vivo",
+  "genre": "Latin",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "19279890-ebb6-0ed6-0408-8d19a98f9039",
+  "num": 155,
+  "name": "Latin Vault",
+  "genre": "Latin",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "098425c8-142d-9ee9-3d45-bc5f7b284bd4",
+  "num": 156,
+  "name": "WWE Radio",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "2f7441a4-0d18-43ff-a574-e98217c28f4a",
+  "num": 157,
+  "name": "SiriusXM FC",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "771e64b7-b469-2b4f-51a7-333f940b859a",
+  "num": 158,
+  "name": "VSiN",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5f35c1e2-2fcd-8bb9-2770-02dacce34c99",
+  "num": 163,
+  "name": "Attitude Franco",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "01675bf6-1d35-d05f-2e73-0a750694aa6d",
+  "num": 164,
+  "name": "Mixtape: North",
+  "genre": "Hip-Hop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "cfa7a7a4-b998-2d96-aba5-c5e988d4726d",
+  "num": 165,
+  "name": "The Indigiverse",
+  "genre": "",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "fdb3a2d1-dc33-16c6-4ccf-86d522b21f3e",
+  "num": 166,
+  "name": "Racines Musicales",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "54f4144b-13f6-4e4c-3d4b-3d9f6f766e27",
+  "num": 167,
+  "name": "Canada Talks",
+  "genre": "Society & Culture",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "ad78ffbd-6cbd-e19e-27c5-043649ef4e8e",
+  "num": 168,
+  "name": "SiriusXM Comedy Club",
+  "genre": "Comedy",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "e2cc6149-5716-4324-2537-4cce09d9b09c",
+  "num": 169,
+  "name": "CBC Radio One",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "32c45f24-14ee-6f33-e79d-d859ff1627a4",
+  "num": 170,
+  "name": "ICI Premi\u00e8re",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "60035cea-1181-5b91-4c33-ba63663a37e2",
+  "num": 171,
+  "name": "Top of the Country Radio",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "270b52d0-fde5-2372-6e48-e890fbac3d14",
+  "num": 172,
+  "name": "SiriusXM Scoreboard",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d0775651-a522-5ca2-7be7-20f97f37bbfb",
+  "num": 173,
+  "name": "The Verge",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b9ee6786-80aa-51c7-1449-64a1484d7cc7",
+  "num": 174,
+  "name": "Influence Franco",
+  "genre": "",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "047ca775-d9c4-ef78-2cfa-185f407d8233",
+  "num": 218,
+  "name": "SiriusXM INDYCAR Nation",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b8c4de96-afd9-85ee-7e5f-95c2e380ab65",
+  "num": 300,
+  "name": "SiriusXM 300",
+  "genre": "Holiday",
+  "entitled": true,
+  "offAir": true
+ },
+ {
+  "id": "c3890f3c-1222-5036-bea9-6d52753bf018",
+  "num": 301,
+  "name": "Road Trip Radio",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "2211d1e6-153e-f617-b0d7-fd0b4ff513f2",
+  "num": 302,
+  "name": "Andy Cohen's Kiki Lounge",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d0759ae0-eeef-48e4-c4b9-526217aac33d",
+  "num": 305,
+  "name": "Mosaic",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "e3041d19-daa5-6517-8c73-41976582d1f9",
+  "num": 308,
+  "name": "Deep Tracks",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "a00885e6-262a-0291-458b-e0b07fba71e1",
+  "num": 309,
+  "name": "Jam On 309",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "3adfcd26-b336-23cb-f40d-8e4f1a40e1de",
+  "num": 312,
+  "name": "Bon Jovi Radio",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d8babd4e-64e3-ff81-3d24-2407e0974cdc",
+  "num": 314,
+  "name": "Green Day's Idiot Nation",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "36e165d2-77d0-198b-f00a-a8606b04f4fb",
+  "num": 315,
+  "name": "Red Hot Chili Peppers",
+  "genre": "R&B",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "0060eb0d-00ee-75f5-9964-5c1ba8fb1b60",
+  "num": 330,
+  "name": "SiriusXM Silk 330",
+  "genre": "R&B",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "ac00ab0c-0a60-63bb-32fe-44e8b9be24fd",
+  "num": 332,
+  "name": "Shaggy Boombastic Radio",
+  "genre": "International",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "705b4f46-09ae-c9cc-26c5-30b56d62877c",
+  "num": 340,
+  "name": "Radio Monaco",
+  "genre": "Dance & Electronic",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "8d387b31-2065-7393-01c5-f86e3ea47dc9",
+  "num": 341,
+  "name": "Utopia",
+  "genre": "Dance & Electronic",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "78612a95-0706-3f8d-a72d-7b8347093f16",
+  "num": 349,
+  "name": "Bakersfield Beat",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5b537ac7-2357-55f9-a81c-1229382feffb",
+  "num": 350,
+  "name": "Red White & Booze",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "bb9c9783-c6cd-1ab7-1d5a-ecde71598019",
+  "num": 359,
+  "name": "North Americana",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5a5db052-9329-e54f-2df9-6dfb5d386046",
+  "num": 362,
+  "name": "Grown Folk JAMZ",
+  "genre": "",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "4a4c6c22-787c-90f5-5c4b-bd635d3972b9",
+  "num": 370,
+  "name": "ESPN Podcasts",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "f5701423-11a8-9ee3-e9f9-11142108ae31",
+  "num": 371,
+  "name": "SiriusXM ACC Radio",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "a1aed141-90d4-4f65-4c58-eb0d99d8bcce",
+  "num": 372,
+  "name": "SiriusXM Big Ten Radio",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "454db282-082e-b9a0-d099-89afbf335688",
+  "num": 374,
+  "name": "SiriusXM SEC Radio",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "7c987478-2f68-d267-acc6-56497c448256",
+  "num": 375,
+  "name": "Westwood One Sports",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "09d1edf4-3e54-59e1-3fa6-e68233c07b17",
+  "num": 455,
+  "name": "C-SPAN Radio",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "9f8d08b0-f6cb-b41f-e8ac-24990bd5352c",
+  "num": 460,
+  "name": "The Billy Graham Channel",
+  "genre": "Religion",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "bffe40f0-1688-dbba-e420-ef894d49d17d",
+  "num": 501,
+  "name": "Limited Edition 1",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": true
+ },
+ {
+  "id": "70236813-3a54-23e2-00a9-2d98888a4c75",
+  "num": 502,
+  "name": "Limited Edition 2",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": true
+ },
+ {
+  "id": "8fcd47c1-c56f-a906-871d-f8a6ca8d928d",
+  "num": 503,
+  "name": "Limited Edition 3",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": true
+ },
+ {
+  "id": "d1320015-4873-9375-d7ea-6c0f325479c7",
+  "num": 504,
+  "name": "Limited Edition 4",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": true
+ },
+ {
+  "id": "4a121e6f-9d04-d2bb-763f-2b9119a5d281",
+  "num": 505,
+  "name": "Limited Edition 5",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": true
+ },
+ {
+  "id": "456700c3-f2df-3a94-8e76-966e047c7d18",
+  "num": 506,
+  "name": "Limited Edition 6",
+  "genre": "R&B",
+  "entitled": true,
+  "offAir": true
+ },
+ {
+  "id": "1e78cc73-4c8d-3a3f-6db2-7cc1857a8b7c",
+  "num": 507,
+  "name": "Limited Edition 7",
+  "genre": "Hip-Hop",
+  "entitled": true,
+  "offAir": true
+ },
+ {
+  "id": "14c3bc4f-4309-b439-4a84-54c0f26a581c",
+  "num": 508,
+  "name": "Limited Edition 8",
+  "genre": "",
+  "entitled": true,
+  "offAir": true
+ },
+ {
+  "id": "78239fb8-a9cb-fc9e-4244-2cef6c2527c9",
+  "num": 509,
+  "name": "Limited Edition 9",
+  "genre": "",
+  "entitled": true,
+  "offAir": true
+ },
+ {
+  "id": "0362be32-e873-95f6-c282-2fcf7be86ab6",
+  "num": 510,
+  "name": "Little Miss Twain Radio",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "ecb0f19c-ea10-d4ce-0326-4e7477d16d5c",
+  "num": 511,
+  "name": "Limited Edition 11",
+  "genre": "",
+  "entitled": true,
+  "offAir": true
+ },
+ {
+  "id": "08361d2b-88c3-df4d-d782-cb3e1ffdaad8",
+  "num": 512,
+  "name": "Limited Edition 12",
+  "genre": "",
+  "entitled": true,
+  "offAir": true
+ },
+ {
+  "id": "4466e297-33f5-b69f-e5e7-71be602ebb2f",
+  "num": 550,
+  "name": "Pop Top 500",
+  "genre": "Dance & Electronic",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "6be4367a-f423-68eb-1a5e-76ef11a8970e",
+  "num": 551,
+  "name": "80s on 8 Top 500",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "35c2ba06-4e2f-39f9-4538-b9fdd694650c",
+  "num": 552,
+  "name": "90s on 9 Top 500",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "42f72153-ec76-e66c-c517-e86a6dcbe922",
+  "num": 553,
+  "name": "Classic Rock Top 1000",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b3f0ba0e-1d1c-ac76-188f-bea057b3c212",
+  "num": 556,
+  "name": "Hip-Hop Chronicles",
+  "genre": "Hip-Hop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "451bf902-005b-da8b-08bf-e24d34df486e",
+  "num": 558,
+  "name": "Country Top 1000",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "45a553ba-df24-a84a-d197-64e26adc405f",
+  "num": 560,
+  "name": "Billboard Top 500",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "33794a0f-2a24-08bb-492e-12e441fab2f0",
+  "num": 602,
+  "name": "Holiday Traditions",
+  "genre": "Holiday",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d960e76a-e678-e62b-a7f2-6345afee1bb2",
+  "num": 702,
+  "name": "Disney Jr. Radio",
+  "genre": "Family & Kids",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "02394c8d-7afe-6ba2-3791-fce63b1e4d85",
+  "num": 703,
+  "name": "Pandora Now",
+  "genre": "Hip-Hop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b96d76d6-935a-3b90-c22d-e0bc7ba11543",
+  "num": 705,
+  "name": "SiriusXM K-Pop",
+  "genre": "International",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "3fd664a8-229c-ce9b-c468-66e2a54abf0b",
+  "num": 708,
+  "name": "SiriusXM Love",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5583d0b9-0505-be47-22c5-473d0d9c8086",
+  "num": 709,
+  "name": "SiriusXO",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "882b5229-2798-4385-5f05-0835c1d017c2",
+  "num": 710,
+  "name": "The Loft",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "f95497ef-39c0-66fd-5749-f6c7b6f768b9",
+  "num": 711,
+  "name": "Petty's Buried Treasure",
+  "genre": "R&B",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "dc440aa6-e5bd-0a56-fba3-e14b9f9d0062",
+  "num": 713,
+  "name": "RockBar",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "2d926e91-aa32-4e53-85e5-d444870eff11",
+  "num": 715,
+  "name": "Classic Rock Party",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "255682b9-78d5-0279-ca90-fb6b37c87592",
+  "num": 720,
+  "name": "Sway's Universe",
+  "genre": "Hip-Hop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "862cfe43-6be7-8250-d89e-51fa75f70fc5",
+  "num": 721,
+  "name": "Stevie's Coolest Songs",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "21c2a98a-e53e-c944-8e23-12cabd6c3439",
+  "num": 723,
+  "name": "RTB - Mixdown",
+  "genre": "Hip-Hop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "95179ecb-a419-71aa-f3e6-92f5c4db1f7f",
+  "num": 724,
+  "name": "SoundCloud Radio",
+  "genre": "Hip-Hop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "6d5e6d8a-dbc8-b328-72ef-cb5e2a62a3a0",
+  "num": 735,
+  "name": "Steve Aoki's Remix Radio",
+  "genre": "Dance & Electronic",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "44a043a9-4ad8-4f24-fbef-866695c96c95",
+  "num": 736,
+  "name": "A State of Armin",
+  "genre": "Dance & Electronic",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b7ef42fd-843b-8aa2-27ab-3723e312b978",
+  "num": 737,
+  "name": "Experts Only Radio",
+  "genre": "Dance & Electronic",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "ab42e288-7fde-7598-31fd-2ca6e09d7559",
+  "num": 738,
+  "name": "One World Radio",
+  "genre": "Dance & Electronic",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "784046a2-4237-e099-29ab-6605813f864b",
+  "num": 739,
+  "name": "Savior Sunday Daily",
+  "genre": "Christian",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "04e45b04-19ab-3ca3-3064-4fe6320df18b",
+  "num": 740,
+  "name": "Outsiders Radio",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5fbd983b-7cf9-71d7-7890-c13682e2375a",
+  "num": 741,
+  "name": "The Village",
+  "genre": "Country",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d4d17484-cb4d-06bf-60e0-2944cb827371",
+  "num": 744,
+  "name": "Met Opera Radio",
+  "genre": "Classical",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "a8465da9-2ce2-9b01-6679-e67c5066697b",
+  "num": 745,
+  "name": "SiriusXM Pops",
+  "genre": "Classical",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d324f7fe-efc8-e5fa-5ad5-14fa6ba0d9bf",
+  "num": 746,
+  "name": "Spa",
+  "genre": "New Age & Ambient",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "38e112ec-cc49-1802-1062-f9a64518d19b",
+  "num": 757,
+  "name": "The Tragically Hip Radio",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "fb5fcfc1-bbd9-6cf1-578c-87c47aabce00",
+  "num": 758,
+  "name": "Iceberg",
+  "genre": "Rock",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "882607f1-0959-53f1-e58d-67b395b17247",
+  "num": 759,
+  "name": "Les Tubes Franco",
+  "genre": "Pop",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "3a35a1f3-aad6-4abe-a93d-7b2f792ac726",
+  "num": 760,
+  "name": "Chucho's Cuba & Beyond",
+  "genre": "International",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d248760a-9889-21d9-f1b2-fa9ba611b396",
+  "num": 761,
+  "name": "Celia Cruz AZ\u00daCAR!",
+  "genre": "Latin",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "2ab4b7da-039c-e67d-e00d-c7313871a3d4",
+  "num": 762,
+  "name": "Caricia",
+  "genre": "Latin",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "efb97ee8-8555-b0f7-e1ea-e67dcb3f23aa",
+  "num": 763,
+  "name": "Viva",
+  "genre": "Latin",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "6df23c85-6348-397c-67be-7ba8c2fbd2e8",
+  "num": 764,
+  "name": "Latidos",
+  "genre": "Latin",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "961428e4-50e1-18d3-f353-4bbe4d155822",
+  "num": 765,
+  "name": "Flow Naci\u00f3n",
+  "genre": "Latin",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "f9f80eb9-a253-6e02-8fc8-33fa6ba69bd4",
+  "num": 766,
+  "name": "Luna",
+  "genre": "Jazz",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "44028691-9505-d523-3d98-1a58fd12b9a7",
+  "num": 767,
+  "name": "Rumb\u00f3n",
+  "genre": "Latin",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "7838ff77-9566-436a-5ba7-a8d0d649ae9f",
+  "num": 768,
+  "name": "La Kueva",
+  "genre": "Latin",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "c4533437-55d7-b623-9e7d-da95c64c4caf",
+  "num": 769,
+  "name": "SiriusXM Dhamaka",
+  "genre": "International",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "4d49f200-7e40-2209-511e-5d93b86d227c",
+  "num": 770,
+  "name": "SiriusXM App Originals",
+  "genre": "",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "50b0c84a-9fa5-0f67-2e7b-85802d9f8a3a",
+  "num": 773,
+  "name": "Comedy in Full",
+  "genre": "Comedy",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d20ad2ef-54e7-4b1a-60b6-ff5351421cd0",
+  "num": 786,
+  "name": "Unwell On Air",
+  "genre": "Pop Culture",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "93a8061c-dae0-9668-34bd-a5350770d2cb",
+  "num": 787,
+  "name": "SmartLess Radio",
+  "genre": "Pop Culture",
+  "entitled": true,
+  "offAir": true
+ },
+ {
+  "id": "c2144e7c-f3b3-29b4-0ace-c7abdc77f2c9",
+  "num": 789,
+  "name": "The Jeff Lewis Channel",
+  "genre": "Pop Culture",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "899bf4b1-b4b6-55e6-cee8-7c83d7d227eb",
+  "num": 790,
+  "name": "Entertainment Now",
+  "genre": "",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "2337bd03-66df-f3fa-5f6f-385fd242e405",
+  "num": 791,
+  "name": "Freakonomics Radio",
+  "genre": "Business",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "2f2237ba-4880-43e0-b173-3350b754391d",
+  "num": 792,
+  "name": "Ramsey Network",
+  "genre": "Business",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "2e6388fd-e5fc-a495-586f-2494e81fd919",
+  "num": 793,
+  "name": "Law&Crime",
+  "genre": "Society & Culture",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5ba276e8-bead-8e2a-4428-b13385e50a01",
+  "num": 794,
+  "name": "20/20 True Crime",
+  "genre": "True Crime",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "8e08b8c8-d1a1-c62a-c1a9-d6dc532aefb1",
+  "num": 796,
+  "name": "ABC News Live",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "7dcedf0f-8d43-f932-cdae-81601ee49e30",
+  "num": 798,
+  "name": "NBC News NOW",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b379ceb3-de65-766c-72ac-1e018edac9c8",
+  "num": 799,
+  "name": "FOX Weather",
+  "genre": "News & Politics",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "47fbdaa5-42e0-9d0a-4354-35677f549ae9",
+  "num": 800,
+  "name": "Arizona Cardinals",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "eec15a4a-0944-5dd4-4143-6f8f28f57b08",
+  "num": 801,
+  "name": "Atlanta Falcons",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "63e4dcd4-cff6-dd80-55ac-bc0c29349f67",
+  "num": 802,
+  "name": "Baltimore Ravens",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b30affd7-cc98-bf8d-83ce-6ecb04506ca7",
+  "num": 803,
+  "name": "Buffalo Bills",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "84984e75-c882-77e0-c4ea-a41c3792d074",
+  "num": 804,
+  "name": "Carolina Panthers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "9f31a296-1619-a45e-567c-8d3631616ab7",
+  "num": 805,
+  "name": "Chicago Bears",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "ce92b663-db6a-1102-31b6-59ef3855c338",
+  "num": 806,
+  "name": "Cincinnati Bengals",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "debf0b23-3dc0-8e3b-70c4-a8702ff510d6",
+  "num": 807,
+  "name": "Cleveland Browns",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "927aa7a8-44b2-a09a-7529-f278f6d70e0f",
+  "num": 808,
+  "name": "Dallas Cowboys",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "346e8032-8f80-9d8f-1ca1-f9b31e17ee80",
+  "num": 809,
+  "name": "Denver Broncos",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "390004b7-f690-7537-a4b4-f756a360cbce",
+  "num": 810,
+  "name": "Detroit Lions",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "cd7ebd29-4e4c-9639-836a-b537f2e1c564",
+  "num": 811,
+  "name": "Green Bay Packers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "9f2ee511-bbea-e7bd-5598-fc8a4311c827",
+  "num": 812,
+  "name": "Houston Texans",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d37b8bc5-c1f4-a69b-af6e-7e5ef0ecef7d",
+  "num": 813,
+  "name": "Indianapolis Colts",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "123d4a3d-f6f5-7086-79f4-1c481cc6c8f0",
+  "num": 814,
+  "name": "Jacksonville Jaguars",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "370cd8f6-c216-2efe-0e0d-71e35cca96cf",
+  "num": 815,
+  "name": "Kansas City Chiefs",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "993460d0-95ba-3cf0-c73d-cddb670ee4a0",
+  "num": 816,
+  "name": "Las Vegas Raiders",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "1ae7b853-cd4e-6922-036e-127139b3628e",
+  "num": 817,
+  "name": "Los Angeles Chargers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "0ae9517d-18da-ca1f-efd6-e61182d4dce8",
+  "num": 818,
+  "name": "Los Angeles Rams",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "4afa04c9-d1d1-b2d5-5e0d-f8e375750e75",
+  "num": 819,
+  "name": "Miami Dolphins",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "034a6e76-af1c-7aaf-4e1b-d93d3c3550d8",
+  "num": 820,
+  "name": "Minnesota Vikings",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "84d1b59f-a37d-5ffc-79e6-e9c017386c3e",
+  "num": 821,
+  "name": "New England Patriots",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "ef7bf2a6-345e-aa14-9733-dd4617a98c5a",
+  "num": 822,
+  "name": "New Orleans Saints",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "11e6d525-fe2c-297d-c264-98187d25700b",
+  "num": 823,
+  "name": "New York Giants",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "56a7ef77-cd6a-c8ed-b786-1bc1e58cc3c1",
+  "num": 824,
+  "name": "New York Jets",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "9156e6b4-bab0-d808-10a1-e017644ac87c",
+  "num": 825,
+  "name": "Philadelphia Eagles",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "102fb848-1671-f633-f0c3-c3cbc9775af0",
+  "num": 826,
+  "name": "Pittsburgh Steelers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "ff5d43da-0287-7a47-ba14-8ebdac107c17",
+  "num": 827,
+  "name": "San Francisco 49ers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d17bd1ea-1c70-6757-14d0-3d862341e38c",
+  "num": 828,
+  "name": "Seattle Seahawks",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "7372497a-c237-e5de-a1ed-6d3e083fedc9",
+  "num": 829,
+  "name": "Tampa Bay Buccaneers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "cfc27539-f855-7b94-01ff-9341f7825c8c",
+  "num": 830,
+  "name": "Tennessee Titans",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "af7393ce-01cf-560f-2382-bb683c345640",
+  "num": 831,
+  "name": "Washington Commanders",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "41c960eb-799a-90d8-18b1-62b5ae608d2c",
+  "num": 832,
+  "name": "NFL en Espa\u00f1ol 832",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d4971239-4b12-40d3-d25b-06877ad5d792",
+  "num": 835,
+  "name": "F1 on SiriusXM",
+  "genre": "Sports Talk",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "bf3561ee-7605-89db-58c2-a863f09fbc88",
+  "num": 840,
+  "name": "Arizona Diamondbacks",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "7ae4cb81-ed66-3576-c6ad-c2e714c1b9f0",
+  "num": 841,
+  "name": "Athletics",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "e8ca58ee-fbdc-3126-392f-5756b5680a9e",
+  "num": 842,
+  "name": "Atlanta Braves",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "59e2b9d5-e5ee-271f-c116-9a14d63e163b",
+  "num": 843,
+  "name": "Baltimore Orioles",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "c1e2c988-3d4a-277a-3e60-fc315fdd5b20",
+  "num": 844,
+  "name": "Boston Red Sox",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "ea24fa32-9ba9-2430-6364-f0ac8dfc410b",
+  "num": 845,
+  "name": "Chicago Cubs",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "527f644e-849a-02c9-524f-0e5bf332129d",
+  "num": 846,
+  "name": "Chicago White Sox",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "66d24366-a6ee-aff9-2cf0-6d390b758208",
+  "num": 847,
+  "name": "Cincinnati Reds",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "13f5be5d-1ca3-60bd-16d3-e77375a15f29",
+  "num": 848,
+  "name": "Cleveland Guardians",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "cb05de05-bc67-3f06-e1b2-110454df3cc1",
+  "num": 849,
+  "name": "Colorado Rockies",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "a6b599c6-1681-1d5a-2b43-3008ecfd19af",
+  "num": 850,
+  "name": "Detroit Tigers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d4fb8124-6322-2c78-88c4-dbabe29319cc",
+  "num": 851,
+  "name": "Houston Astros",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "3a88ba8a-f17e-65ef-20d3-5b4831938d88",
+  "num": 852,
+  "name": "Kansas City Royals",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "fa621690-4b3e-4d9b-d35a-d3a81ae6a617",
+  "num": 853,
+  "name": "Los Angeles Angels",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "ab9b53f1-7ebf-737d-313c-6f78c5b24fd2",
+  "num": 854,
+  "name": "Los Angeles Dodgers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "59a9408b-a743-40a0-920c-164fd7819357",
+  "num": 855,
+  "name": "Miami Marlins",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "aecdf4c1-d092-c97a-8aee-f82a088784d6",
+  "num": 856,
+  "name": "Milwaukee Brewers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "cd1a2fbf-5d03-e878-14ca-86f20678a4bc",
+  "num": 857,
+  "name": "Minnesota Twins",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "26eb3ec9-f6a9-4db8-072b-84abf0ccfe4f",
+  "num": 858,
+  "name": "New York Mets",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "21fd583e-8f6a-b869-4f75-9e8a3f604eb0",
+  "num": 859,
+  "name": "New York Yankees",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "09cdce68-b0dc-fa0f-664a-46983e213ee8",
+  "num": 860,
+  "name": "Philadelphia Phillies",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "bbafbc6d-93c1-785b-7753-f62639a289f2",
+  "num": 861,
+  "name": "Pittsburgh Pirates",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "dd089469-1a9f-7a8b-164d-a1abc1d12e32",
+  "num": 862,
+  "name": "San Diego Padres",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b4d81d39-2c05-49e1-e591-24cacdd274ed",
+  "num": 863,
+  "name": "San Francisco Giants",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "4ebd0395-6ddf-ca22-0dbc-eec804077744",
+  "num": 864,
+  "name": "Seattle Mariners",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "38ba7d8b-5c74-79e2-1b6d-4e03669d2525",
+  "num": 865,
+  "name": "St. Louis Cardinals",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "4a03994d-e73a-2806-47b2-96f5e3cc085f",
+  "num": 866,
+  "name": "Tampa Bay Rays",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "8a86c5bf-3d8b-f795-262b-af0878908c08",
+  "num": 867,
+  "name": "Texas Rangers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "eb149af3-a977-9164-487e-6b229d3b417a",
+  "num": 868,
+  "name": "Toronto Blue Jays",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "7ccb8330-7c49-2257-8a2a-95de18260ad0",
+  "num": 869,
+  "name": "Washington Nationals",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "0b04fd91-ea6a-2c62-cb3b-a339e8f232d3",
+  "num": 870,
+  "name": "MLB en Espa\u00f1ol 870",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "29aaf8cb-3ffa-dea5-d856-d2aec155f775",
+  "num": 871,
+  "name": "MLB en Espa\u00f1ol 871",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "edc23ad2-d444-169d-f96d-28152485c3df",
+  "num": 880,
+  "name": "Atlanta Hawks",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "1ea7158e-d97e-fdcd-a94d-b9120d66be21",
+  "num": 881,
+  "name": "Boston Celtics",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "653efded-9c0c-d654-d26e-50b103720df4",
+  "num": 882,
+  "name": "Brooklyn Nets",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5993a166-246d-ef2c-d0ae-3c5c0080d1ec",
+  "num": 883,
+  "name": "Charlotte Hornets",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5a1b6243-6e50-5081-ba94-58299a2955cf",
+  "num": 884,
+  "name": "Chicago Bulls",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "f30229a8-c154-306c-11e2-7cb9ecd6d4f7",
+  "num": 885,
+  "name": "Cleveland Cavaliers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "01f2a47f-52a3-242b-5f15-86ffcf86be54",
+  "num": 886,
+  "name": "Dallas Mavericks",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "f0815486-46cd-eb4a-df92-5aa97b240c48",
+  "num": 887,
+  "name": "Denver Nuggets",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "c62e8594-f7c2-ff07-b0a5-59c170368257",
+  "num": 888,
+  "name": "Detroit Pistons",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "f889faba-f9ff-ff9c-45d9-71d0f47770f1",
+  "num": 889,
+  "name": "Golden State Warriors",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b961e6e4-466c-c951-1785-9fa11d8030c8",
+  "num": 890,
+  "name": "Houston Rockets",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d8a95749-fdcc-c011-8ed8-4aece4416d6b",
+  "num": 891,
+  "name": "Indiana Pacers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "53216c12-ea6f-c5e6-ea75-add7f032def1",
+  "num": 892,
+  "name": "Los Angeles Clippers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "68e21caa-814a-baf0-c0e0-9277c5dbac18",
+  "num": 893,
+  "name": "Los Angeles Lakers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "1f8d835e-8469-aefe-f272-8011d2104d0d",
+  "num": 894,
+  "name": "Memphis Grizzlies",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5b7c0540-4282-5ce0-d61b-e8810f9ed04b",
+  "num": 895,
+  "name": "Miami Heat",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "34e619a3-5f36-dc0d-d9b4-4ede27c5e27f",
+  "num": 896,
+  "name": "Milwaukee Bucks",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "4f8ae5b0-dd13-8361-000c-bf1a27fc738e",
+  "num": 897,
+  "name": "Minnesota Timberwolves",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "9d8e4c55-75f3-7568-b5a3-d3205972c955",
+  "num": 898,
+  "name": "New Orleans Pelicans",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "4a0b13f5-49cd-52b5-2b30-e36b9f7484ba",
+  "num": 899,
+  "name": "New York Knicks",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "3acb15ef-a0f7-f1ad-9973-a44e89e3175e",
+  "num": 900,
+  "name": "Oklahoma City Thunder",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "56c58f7d-922d-54a9-5a74-e58ac29af81c",
+  "num": 901,
+  "name": "Orlando Magic",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "f9f1fd27-ab2d-1c40-fe0b-35935f14c8aa",
+  "num": 902,
+  "name": "Philadelphia 76ers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "9fcf6293-93cb-dd83-bf38-77449b184baa",
+  "num": 903,
+  "name": "Phoenix Suns",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5992d340-726a-f84d-4d26-aec7de18f0c1",
+  "num": 904,
+  "name": "Portland Trail Blazers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "6b1b47eb-7b16-38db-4df3-626fbf395be4",
+  "num": 905,
+  "name": "Sacramento Kings",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "34c08004-ca56-efda-e0df-7a838d7c146e",
+  "num": 906,
+  "name": "San Antonio Spurs",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "4aca6ca0-1234-4feb-83ca-01c227c32bf4",
+  "num": 907,
+  "name": "Toronto Raptors",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "39ceed7a-4a2f-b7f8-8e43-474c009d1019",
+  "num": 908,
+  "name": "Utah Jazz",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "6aa041e3-95ee-280e-1bda-8694dd756f53",
+  "num": 909,
+  "name": "Washington Wizards",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "69bc4baf-ac0e-e2ab-adf6-26248a21e5bb",
+  "num": 920,
+  "name": "Anaheim Ducks",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b165fedf-fa20-2810-9816-a1fd1e7d688b",
+  "num": 921,
+  "name": "Boston Bruins",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "a26db23b-e673-ba0e-8f17-86bc75fd4ccb",
+  "num": 922,
+  "name": "Buffalo Sabres",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "bbadead9-4fc7-174a-d360-3fd549bc530e",
+  "num": 923,
+  "name": "Calgary Flames",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "cd8a8df0-969f-7824-5ba6-9085d69646dc",
+  "num": 924,
+  "name": "Carolina Hurricanes",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "526fb88f-4a11-a342-2c12-13b265a976bc",
+  "num": 925,
+  "name": "Chicago Blackhawks",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "cbcb6ddc-c39d-b569-feca-1760c4575da6",
+  "num": 926,
+  "name": "Colorado Avalanche",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "a6844e11-3385-8ca9-9d43-7778690f1a5a",
+  "num": 927,
+  "name": "Columbus Blue Jackets",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d55c4c07-402b-0842-a876-8559ea64f494",
+  "num": 928,
+  "name": "Dallas Stars",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "39fb1e22-85b1-90cd-dc54-ed218228b5a2",
+  "num": 929,
+  "name": "Detroit Red Wings",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d6931be2-a2b5-6fd7-e8c6-ff4e1a46cc10",
+  "num": 930,
+  "name": "Edmonton Oilers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "8a38d8f9-920b-adab-f0b2-51c590231277",
+  "num": 931,
+  "name": "Florida Panthers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "1413f1e2-2205-b87a-80ef-cdb897803d31",
+  "num": 932,
+  "name": "Los Angeles Kings",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b9a073d8-3d4d-f050-d797-4100d0f2cb7c",
+  "num": 933,
+  "name": "Minnesota Wild",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "3298b787-35c9-f236-c885-3e7c760737f0",
+  "num": 934,
+  "name": "Montreal Canadiens",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5d8bfb31-2244-5e33-7654-6b92f7b2786d",
+  "num": 935,
+  "name": "Nashville Predators",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "07523f40-2db7-749a-b453-7a7732cda89c",
+  "num": 936,
+  "name": "New Jersey Devils",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "4219787d-1447-1078-8f17-cc4a7dc4d570",
+  "num": 937,
+  "name": "New York Islanders",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "37188687-c182-d226-6061-806722134518",
+  "num": 938,
+  "name": "New York Rangers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "8d416eb2-df73-1bef-2b3f-798efa6e7026",
+  "num": 939,
+  "name": "Ottawa Senators",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "ca365b18-a96a-37a5-9fe4-2d2a45fae892",
+  "num": 940,
+  "name": "Philadelphia Flyers",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d7890c84-3980-6144-56bc-b6449cb142bc",
+  "num": 941,
+  "name": "Pittsburgh Penguins",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "31ebdfc0-dc1e-5ade-bc9c-6bb6dda1d46a",
+  "num": 942,
+  "name": "San Jose Sharks",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "0185552e-93a4-09fa-a5f9-b8aa69f7458f",
+  "num": 943,
+  "name": "Seattle Kraken",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "7ef15917-d819-08b0-2ca3-4eed7b6f2a7e",
+  "num": 944,
+  "name": "St. Louis Blues",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "4fcf31bd-1eae-b620-5ee3-1eb86f5c95e9",
+  "num": 945,
+  "name": "Tampa Bay Lightning",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "80742b6d-2284-d129-2e93-c305d00a8492",
+  "num": 946,
+  "name": "Toronto Maple Leafs",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "93717a84-1d49-a2c5-c49f-77fd2e2ac4bd",
+  "num": 947,
+  "name": "Utah Mammoth",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "54b6dbc7-c1a0-4c38-7f30-3485c6ffdb46",
+  "num": 948,
+  "name": "Vancouver Canucks",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d4872bcb-ab54-c000-b525-7f7458e01add",
+  "num": 949,
+  "name": "Vegas Golden Knights",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "2aff9579-cef8-0c9a-1f27-8c546c8f4cfa",
+  "num": 950,
+  "name": "Washington Capitals",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "9d367430-7e62-f0ac-2fd9-ec50d49c6820",
+  "num": 951,
+  "name": "Winnipeg Jets",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "c4212ffd-b8ea-e00b-abb7-7a78efd0e0a4",
+  "num": 952,
+  "name": "Big 12 952",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "6c9062f6-d579-ca09-f6ac-c884e8c5e9b9",
+  "num": 953,
+  "name": "Big 12 953",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "0e3617ab-9b64-4215-de6a-66db75f0f2fe",
+  "num": 954,
+  "name": "Big 12 954",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "684cd9ac-0af0-2b2e-96dc-660d8cdb1520",
+  "num": 955,
+  "name": "ACC 955",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "02ef49c8-8145-d62a-f448-11da698d7fda",
+  "num": 956,
+  "name": "ACC 956",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "8a53ab2f-e2bb-5f5f-bb74-b073f7a82647",
+  "num": 957,
+  "name": "Big Ten 957",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "dd6389bb-3d84-a715-2bb7-8602b609eb53",
+  "num": 958,
+  "name": "Big Ten 958",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "dd93c7f3-bccc-1aee-ef6d-c530619efaac",
+  "num": 959,
+  "name": "Big Ten 959",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "8c9dc9b4-cd99-0eed-46e3-607caa75296c",
+  "num": 960,
+  "name": "SEC 960",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d93c13f8-02fc-93ee-04b7-de929ff2d73f",
+  "num": 961,
+  "name": "SEC 961",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "9c50e3df-a38c-5c62-d45f-7665f89d2f06",
+  "num": 962,
+  "name": "SEC 962",
+  "genre": "Sports & Recreation",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "5c10b4af-52aa-7d5e-bf1d-d64d3df39716",
+  "num": 963,
+  "name": "Sports 963",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "fbf3f7ed-b12d-410e-e527-d3100d90acee",
+  "num": 964,
+  "name": "Sports 964",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "33a755a1-f96a-921b-eb35-eaf7876e5dba",
+  "num": 965,
+  "name": "Sports 965",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "71a1fd7c-45e0-83f2-380b-730db7f3a8b3",
+  "num": 966,
+  "name": "Sports 966",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "453c679c-6245-b7e0-d15a-febafe086f40",
+  "num": 967,
+  "name": "Sports 967",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "bd1cd910-3449-607f-cd34-d610d7d81904",
+  "num": 968,
+  "name": "Sports 968",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d5ea02ab-5c78-1e67-f4e2-f284c48fea4b",
+  "num": 969,
+  "name": "Sports 969",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "362bbdc9-e980-34cd-0c9f-ca99b7ce0e78",
+  "num": 970,
+  "name": "Sports 970",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "9afa01eb-68eb-6720-b6db-f3adf9b2f8cd",
+  "num": 971,
+  "name": "Sports 971",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "e17875c7-adb2-5747-19ee-e49da12beb4a",
+  "num": 972,
+  "name": "Sports 972",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "628c4c43-c11f-86e3-90ba-be562a361317",
+  "num": 973,
+  "name": "Sports 973",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "715bd147-bdc6-53ed-c990-7b348c83a7a0",
+  "num": 974,
+  "name": "Sports 974",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "3bfee75a-49bb-3693-562e-2e454bc7776f",
+  "num": 975,
+  "name": "Sports 975",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "4d956d91-4f04-f839-d44f-6678299b1e2b",
+  "num": 976,
+  "name": "Sports 976",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "0a175ec0-92ce-a329-b9a4-4194d282b012",
+  "num": 977,
+  "name": "Sports 977",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "be12d233-3e43-ff78-0c51-1b99c489441f",
+  "num": 978,
+  "name": "Sports 978",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "0d290ea3-9179-da3a-b58e-9dd3dc62fb7b",
+  "num": 979,
+  "name": "Sports 979",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "2d8fdcb4-d659-d753-4a02-bef46c8d43c0",
+  "num": 980,
+  "name": "Sports 980",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "c0b87b0b-d883-ea96-1397-02b6c8337df0",
+  "num": 981,
+  "name": "Sports 981",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b024ffb5-5849-cbed-9892-a662e1fd8ba9",
+  "num": 982,
+  "name": "Sports 982",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d958fe00-bd69-4938-5641-a2353577bf9b",
+  "num": 983,
+  "name": "Sports 983",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "2731dc6c-3d44-bfbb-e0de-5379dda8b403",
+  "num": 984,
+  "name": "Sports 984",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "a39064ba-a2b9-01b2-fa8e-d60cb78179ac",
+  "num": 985,
+  "name": "Sports 985",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "d8ad98b3-d661-3c32-5e4a-464fbaaf861b",
+  "num": 986,
+  "name": "Sports 986",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "e5e0508b-cfca-6616-47f1-acd16eaeff75",
+  "num": 987,
+  "name": "Sports 987",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "4fcfce27-552d-ffc6-4e79-cdb3b53391a9",
+  "num": 988,
+  "name": "Sports 988",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "02ff1105-7361-e874-1577-936f0114346b",
+  "num": 989,
+  "name": "Sports 989",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "036be0de-b618-b305-7b13-24347d03110b",
+  "num": 990,
+  "name": "Sports 990",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "77f68b58-2e59-1379-416f-0da7ffaa9060",
+  "num": 991,
+  "name": "Sports 991",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "04b2a781-8a7b-e44b-97c1-e32586477952",
+  "num": 992,
+  "name": "Sports 992",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "0dd1d12b-eacb-4676-1503-0f31d536f101",
+  "num": 993,
+  "name": "Sports 993",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "fe842efd-bd29-8e0d-03bf-3f83fe4a2292",
+  "num": 994,
+  "name": "Sports 994",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "0399f6d5-209f-d09c-26cf-1b546472745f",
+  "num": 995,
+  "name": "Sports 995",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "4263e4aa-ad7c-180c-2ca8-7b092bbfa2b5",
+  "num": 996,
+  "name": "Sports 996",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "b052e2d1-3aca-52b0-3c63-cfa55f12ef17",
+  "num": 997,
+  "name": "Sports 997",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "3c102600-4c64-04e0-3bc6-edcd77b6fb8b",
+  "num": 998,
+  "name": "Sports 998",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "fb4adb28-6794-d1a5-931f-294955b91a83",
+  "num": 999,
+  "name": "Sports 999",
+  "genre": "Live Games",
+  "entitled": true,
+  "offAir": false
+ },
+ {
+  "id": "cb5cc86b-0584-d052-117d-465038a6d4d4",
+  "num": 1999,
+  "name": "Soccer en Espa\u00f1ol",
+  "genre": "",
+  "entitled": true,
+  "offAir": false
+ }
+]

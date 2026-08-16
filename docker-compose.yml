@@ -1,0 +1,62 @@
+# Local test rig for the SiriusXM proxy.
+#
+# Credentials are NOT in this file. The username comes from .env and the
+# password from a Docker secret file — see README.md. Both are gitignored.
+
+services:
+  sxm-proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sxm-proxy
+    restart: unless-stopped
+    ports:
+      # Deliberately not 8080 — too commonly taken. Override with SXM_PORT.
+      - "${SXM_PORT:-7717}:7717"
+    environment:
+      ASPNETCORE_URLS: http://0.0.0.0:7717
+      # Double underscore is .NET's nesting separator: SXM__USERNAME binds to
+      # the "SXM:Username" config key from appsettings.json.
+      SXM__USERNAME: ${SXM_USERNAME:?set SXM_USERNAME in .env}
+      # Password is read from the mounted secret rather than an env var, so it
+      # never lands in `docker inspect` output or the container's environment.
+      SXM_PASSWORD_FILE: /run/secrets/sxm_password
+      SXM__CACHEFOLDER: /tmp/sxm_proxy
+      # M3U export OFF, deliberately. It exists to feed MPD playlists, which we
+      # don't use — samo consumes /icecast/{id} directly.
+      #
+      # It is also load-bearing for stability: the exporter registers an async
+      # lambda with lifetime.ApplicationStarted.Register(), a sync-callback API,
+      # so any exception inside is unobserved and kills the whole process. It
+      # calls GetChannelsAsync() at startup, which asks SiriusXM for 1000
+      # channels in one page — and when their gateway times out on that
+      # ("context deadline exceeded"), an optional feature takes the proxy down.
+      #
+      # Blank disables it via the IsNullOrWhiteSpace guard in
+      # LibraryM3UExporter.StartAsync. This must be set explicitly because
+      # appsettings.json bakes in a non-empty default.
+      LibraryM3UExportFolder: ""
+    secrets:
+      - sxm_password
+    healthcheck:
+      # Checks /channels, NOT a byte-pull from /icecast/.
+      #
+      # A streaming probe would prove more — it is the only thing that detects a
+      # dead SiriusXM session — but it would also open a real stream against
+      # their servers every interval, forever. That is exactly the kind of
+      # unattended traffic that gets an account flagged, and this subscription
+      # is also the one in the car. Not worth it.
+      #
+      # /channels is served from the in-process cache, so this costs SiriusXM
+      # nothing and still catches the failure that actually happens: the process
+      # dying or wedging. A dead session surfaces as a failed stream in samo,
+      # which falls through to rotation if the source is on a schedule rule.
+      test: ["CMD-SHELL", "curl -fsS -o /dev/null http://localhost:7717/channels || exit 1"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+secrets:
+  sxm_password:
+    file: ./sxm_password.txt
