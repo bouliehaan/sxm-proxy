@@ -16,7 +16,7 @@ than shipping an image silently missing `/channels` and `/ui`.
 
 Changes that *edit* upstream logic rather than add to it ship as a diff in
 `extras/patches/`, applied in the same build stage behind a `git apply --check`
-guard. See [extras/patches/README.md](extras/patches/README.md) — currently one
+guard. See [extras/patches/README.md](../extras/patches/README.md) — currently one
 patch, fixing the streaming stability problems described under
 [One channel at a time](#one-channel-at-a-time).
 
@@ -176,7 +176,7 @@ the logs a great deal and the audio not at all. Worth remembering the next time
 this misbehaves: connection-level churn and byte-level delivery are different
 failures, and the logs only show the first one.
 
-See [extras/patches/README.md](extras/patches/README.md) for the full account of
+See [extras/patches/README.md](../extras/patches/README.md) for the full account of
 all five.
 
 ## Known upstream bugs
