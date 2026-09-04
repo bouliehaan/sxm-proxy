@@ -16,8 +16,15 @@ services:
     container_name: sxm-proxy
     restart: unless-stopped
     ports:
+      # Long form, not "7717:7717": `docker compose publish` validates against
+      # the strict schema and rejects the short string form, so the shipped
+      # compose artifact would fail to build with it.
+      #
       # Deliberately not 8080 — too commonly taken. Override with SXM_PORT.
-      - "${SXM_PORT:-7717}:7717"
+      - target: 7717
+        published: "${SXM_PORT:-7717}"
+        protocol: tcp
+        mode: host
     environment:
       ASPNETCORE_URLS: http://0.0.0.0:7717
       # Double underscore is .NET's nesting separator: SXM__USERNAME binds to
