@@ -37,18 +37,17 @@ in `.env`. The password is mounted as a Docker secret and read at startup, so it
 never appears in `docker inspect`, the container environment, or the process
 table.
 
-Deploying to a server from a laptop instead:
+The image is `linux/amd64` only, because upstream's .NET build is. On an arm64
+host it will not run.
+
+If you would rather build it than pull it, fetch the pinned upstream checkout
+first — the Dockerfile compiles from it and the build fails without it:
 
 ```bash
-./deploy.sh
+git clone https://github.com/yob15662/sxm-player.git sxm-player
+git -C sxm-player checkout 470b35b44de00514f1fd626b06c56367695c6efc
+docker compose up -d --build
 ```
-
-Knobs: `SXM_HOST` (default 192.168.1.10), `SXM_SSH_USER`, `SXM_PORT`,
-`SXM_PROJECT_DIR` (default /opt/sxm-proxy). Safe to re-run — every run is a
-rebuild and restart, and credentials already on the server are preserved. It
-builds **on the server**, because the server is x86_64 and dev machines here are
-arm64. It checks the port is free first and waits for the healthcheck before
-claiming success.
 
 ## Endpoints
 
