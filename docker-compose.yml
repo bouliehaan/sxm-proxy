@@ -5,6 +5,10 @@
 
 services:
   sxm-proxy:
+    # Published image, so `docker compose pull` installs without a .NET
+    # toolchain. `build` is the fallback and is what deploy.sh uses (--build)
+    # to ship a working tree that is ahead of the release.
+    image: ghcr.io/bouliehaan/sxm-proxy:latest
     build:
       context: .
       dockerfile: Dockerfile
