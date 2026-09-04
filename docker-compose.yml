@@ -1,17 +1,18 @@
-# Local test rig for the SiriusXM proxy.
+# sxm-proxy. One command, nothing to edit:
 #
-# Credentials are NOT in this file. The username comes from .env and the
-# password from a Docker secret file — see README.md. Both are gitignored.
+#   SXM_USERNAME=you@example.com SXM_PASSWORD=... \
+#     docker compose -f oci://ghcr.io/bouliehaan/sxm-proxy:compose up -d
+#
+# Your SiriusXM credentials are the one thing this cannot work out for itself.
+# The password is taken from your shell and mounted as a secret FILE, so it
+# never lands in the container's environment or in `docker inspect` output. To
+# keep it out of your shell history too:
+#
+#   read -rs SXM_PASSWORD && export SXM_PASSWORD
 
 services:
   sxm-proxy:
-    # Published image, so `docker compose pull` installs without a .NET
-    # toolchain. `build` is the fallback, for running a working tree ahead of
-    # the release — it needs the pinned upstream checkout fetched first.
     image: ghcr.io/bouliehaan/sxm-proxy:latest
-    build:
-      context: .
-      dockerfile: Dockerfile
     container_name: sxm-proxy
     restart: unless-stopped
     ports:
@@ -21,7 +22,7 @@ services:
       ASPNETCORE_URLS: http://0.0.0.0:7717
       # Double underscore is .NET's nesting separator: SXM__USERNAME binds to
       # the "SXM:Username" config key from appsettings.json.
-      SXM__USERNAME: ${SXM_USERNAME:?set SXM_USERNAME in .env}
+      SXM__USERNAME: ${SXM_USERNAME:?set SXM_USERNAME — see the header of this file}
       # Password is read from the mounted secret rather than an env var, so it
       # never lands in `docker inspect` output or the container's environment.
       SXM_PASSWORD_FILE: /run/secrets/sxm_password
@@ -63,4 +64,8 @@ services:
 
 secrets:
   sxm_password:
-    file: ./sxm_password.txt
+    # Read from your shell and mounted as a file. Compose does not put it in the
+    # container's environment, so it stays out of `docker inspect` and the
+    # process table — the same property the old sxm_password.txt file had,
+    # without a file to create.
+    environment: SXM_PASSWORD

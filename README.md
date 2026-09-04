@@ -16,37 +16,31 @@ of service.
 
 ## Install
 
-Two credential files, both gitignored, both created by you:
+Your SiriusXM credentials are the one thing this cannot work out for itself, so
+they go on the same line. Nothing to download, nothing to edit:
 
 ```bash
-printf 'SXM_USERNAME=you@example.com\n' > .env
-printf 'your-password-here' > sxm_password.txt && chmod 600 sxm_password.txt
+read -rs SXM_PASSWORD && export SXM_PASSWORD          # keeps it out of your shell history
+SXM_USERNAME=you@example.com docker compose -f oci://ghcr.io/bouliehaan/sxm-proxy:compose up -d
 ```
 
-Then:
+Then open `http://<this machine>:7717/ui`, pick a channel, copy its stream URL.
 
-```bash
-docker compose pull && docker compose up -d
-```
+The password is mounted as a secret **file**, not an environment variable, so it
+never appears in `docker inspect`, the container's environment, or the process
+table. The port is **7717** (not 8080 — too commonly taken); override with
+`SXM_PORT` on the same line.
 
-That pulls [`ghcr.io/bouliehaan/sxm-proxy:latest`](https://github.com/bouliehaan/sxm-proxy/pkgs/container/sxm-proxy).
-Open `http://<host>:7717/ui`, pick a channel, copy its stream URL.
+The image is `linux/amd64` only, because upstream's .NET build is. It will not
+run on an arm64 host.
 
-The port is **7717** (not 8080 — too commonly taken); override with `SXM_PORT`
-in `.env`. The password is mounted as a Docker secret and read at startup, so it
-never appears in `docker inspect`, the container environment, or the process
-table.
-
-The image is `linux/amd64` only, because upstream's .NET build is. On an arm64
-host it will not run.
-
-If you would rather build it than pull it, fetch the pinned upstream checkout
-first — the Dockerfile compiles from it and the build fails without it:
+Building it yourself instead of pulling: the Dockerfile compiles from the pinned
+upstream checkout, so fetch that first or the build fails.
 
 ```bash
 git clone https://github.com/yob15662/sxm-player.git sxm-player
 git -C sxm-player checkout 470b35b44de00514f1fd626b06c56367695c6efc
-docker compose up -d --build
+docker compose -f docker-compose.yml -f docker-compose.build.yml up -d --build
 ```
 
 ## Endpoints

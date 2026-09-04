@@ -1,0 +1,14 @@
+# Build override, for running a working tree that is ahead of the release.
+#
+#   docker compose -f docker-compose.yml -f docker-compose.build.yml up -d --build
+#
+# Needs the pinned upstream checkout in ./sxm-player first — the Dockerfile
+# compiles from it. Kept out of docker-compose.yml because that file is
+# published to ghcr as the compose artifact behind the one-command install, and
+# an artifact carrying a build stanza would tell someone with no checkout to
+# build a context they do not have.
+services:
+  sxm-proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
