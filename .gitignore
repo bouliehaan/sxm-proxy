@@ -11,3 +11,8 @@ sxm-player/
 # whichever hostname produced them, so they are machine-specific noise rather
 # than anything worth tracking.
 playlists/
+
+# Maintainer tooling: deploy.sh ships a worktree to my dev boxes, commit.sh is
+# the gate before anything goes public. They live on my machine, not in the
+# repo — nobody cloning this can use them.
+*.sh
